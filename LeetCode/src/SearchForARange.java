@@ -14,6 +14,7 @@
  * Tag: Array | Binary Search
  */
 public class SearchForARange {
+    // Accepted
     public int[] searchRange(int[] A, int target) {
         int start = -1, end = -1;
         int left = 0, right = A.length - 1;

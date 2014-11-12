@@ -44,9 +44,6 @@ public class WordBreak {
 
         // tailed[i]: true indicates that substring(0,i-1) can be separated into dictionary words
         boolean[] tailed = new boolean[n + 1];
-        for(int i=0;i<n+1;i++) {
-            tailed[i] = false;
-        }
         for(int i=0;i<n;i++) {
             for(int x : hash[i]) {
                 if(i == 0 || tailed[i]) {
