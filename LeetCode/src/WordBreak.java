@@ -19,11 +19,52 @@ import java.util.Set;
 
 public class WordBreak {
     // Time Limit Exceeded
+//    List<Integer>[] hash;
+//    public boolean wordBreak(String s, Set<String> dict) {
+//        int n = s.length();
+//        hash = new ArrayList[n];
+//        for(int i=0;i<n;i++) {
+//            hash[i] = new ArrayList<Integer>();
+//        }
+//        for(String word : dict) {
+//            for(int i=0;i<n;i++) {
+//                int idx = s.indexOf(word, i);
+//                if(idx != -1) {
+//                    hash[idx].add(idx + word.length());
+//                    i = idx;
+//                }
+//                else {
+//                    break;
+//                }
+//            }
+//        }
+//        return dfs(0, n);
+//    }
+//
+//    private boolean dfs(int x, int n) {
+//        if(x == n) {
+//            return true;
+//        }
+//        else if(x > n) {
+//            return false;
+//        }
+//        else {
+//            for(int y : hash[x]) {
+//                if(dfs(y, n)) {
+//                    return true;
+//                }
+//            }
+//        }
+//        return false;
+//    }
+
+    // Accepted
+    // dynamic programming
     List<Integer>[] hash;
     public boolean wordBreak(String s, Set<String> dict) {
         int n = s.length();
-        hash = new ArrayList[n];
-        for(int i=0;i<n;i++) {
+        hash = new ArrayList[n + 1];
+        for(int i=0;i<n+1;i++) {
             hash[i] = new ArrayList<Integer>();
         }
         for(String word : dict) {
@@ -38,24 +79,20 @@ public class WordBreak {
                 }
             }
         }
-        return dfs(0, n);
-    }
 
-    private boolean dfs(int x, int n) {
-        if(x == n) {
-            return true;
+        // tailed[i]: true indicates that substring(0,i-1) can be separated into dictionary words
+        boolean[] tailed = new boolean[n + 1];
+        for(int i=0;i<n+1;i++) {
+            tailed[i] = false;
         }
-        else if(x > n) {
-            return false;
-        }
-        else {
-            for(int y : hash[x]) {
-                if(dfs(y, n)) {
-                    return true;
+        for(int i=0;i<n;i++) {
+            for(int x : hash[i]) {
+                if(i == 0 || tailed[i]) {
+                    tailed[x] = true;
                 }
             }
         }
-        return false;
+        return tailed[n];
     }
 
     public static void main(String[] args) {
