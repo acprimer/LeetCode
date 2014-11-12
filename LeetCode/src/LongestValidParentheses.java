@@ -45,7 +45,6 @@ public class LongestValidParentheses {
         int[] len = new int[n+1];
         int ans = 0;
         for(int i=0;i<n;i++) {      // loop from index 0
-            len[i] = 0;
             char ch = s.charAt(i);
             if(ch == ')') {
                 // look at here: we need 3 conditions
