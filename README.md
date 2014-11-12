@@ -1,10 +1,10 @@
 LeetCode
 ========
 
-my answers to  LeetCode Online Judge
+My answers to  LeetCode Online Judge
 
 
-| Title | Date | Language |
-| ------|:----:| :-------:|
-| [Word Break](https://oj.leetcode.com/problems/word-break/)  | 2013-10-04 | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/WordBreak.java) |
+| Title | Submit Date | Language | Tag |
+| ------|:----:|:--------:|:---:|
+| [Word Break](https://oj.leetcode.com/problems/word-break/)  | 2013-11-12 | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/WordBreak.java) | DP |
 
