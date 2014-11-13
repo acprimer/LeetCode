@@ -29,9 +29,7 @@ public class LongestValidParentheses {
                     len[i] += len[i-1] + 2;
                 }
             }
-            if(len[i] > ans) {
-                ans = len[i];
-            }
+            ans = Math.max(ans, len[i]);
         }
         return ans;
     }

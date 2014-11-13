@@ -1,26 +1,38 @@
 /**
- * Created by yao on 2014/11/12.
+ * Created by yaodh on 2014/11/13.
+ *
+ * LeetCode: Candy
+ * link: https://oj.leetcode.com/problems/candy/
+ * description:
+ * There are N children standing in a line. Each child is assigned a rating value.
+ * You are giving candies to these children subjected to the following requirements:
+ * --Each child must have at least one candy.
+ * --Children with a higher rating get more candies than their neighbors.
+ * What is the minimum candies you must give?
+ *
+ * Tag: Greedy
  */
 public class Candy {
-    int[] height;
     public int candy(int[] ratings) {
         if(ratings.length <= 1) {
             return ratings.length;
         }
         int n = ratings.length;
-        height = new int[n+1];
+        int[] height = new int[n+1];
+        // give each child only one candy
         for(int i=0;i<n;i++) {
             height[i] = 1;
         }
-        if(ratings[0] < ratings[1]) {
-            update(0, ratings);
+        // guarantee that the right child get more candies than the left child
+        for(int i=1;i<n;i++) {
+            if(ratings[i] > ratings[i-1]) {
+                height[i] = height[i-1] + 1;
+            }
         }
-        if(ratings[n-1] < ratings[n-2]) {
-            update(n-1, ratings);
-        }
-        for(int i=1;i<n-1;i++) {
-            if(ratings[i] <= ratings[i-1] && ratings[i] <= ratings[i+1]) {
-                update(i, ratings);
+        // guarantee that the left child get more candies than the right child
+        for(int i=n-2;i>=0;i--) {
+            if(ratings[i] > ratings[i+1]) {
+                height[i] = Math.max(height[i], height[i+1]+1);
             }
         }
         int ans = 0;
@@ -28,21 +40,6 @@ public class Candy {
             ans += height[i];
         }
         return ans;
-    }
-
-    private void update(int i, int[] ratings) {
-        int n = ratings.length;
-        int j = i-1, curHeight = 1;
-        while(j>=0 && ratings[j] > ratings[j+1]) {
-            height[j] = Math.max(height[j], ++curHeight);
-            j--;
-        }
-        j = i+1;
-        curHeight = 1;
-        while(j<n && ratings[j] > ratings[j-1]) {
-            height[j] = Math.max(height[j], ++curHeight);
-            j++;
-        }
     }
 
     public static void main(String[] args) {
