@@ -20,7 +20,7 @@ import java.util.Map;
  * ---Third node is labeled as 2. Connect node 2 to node 2 (itself), thus forming a self-cycle.
  * -----------------------------
  *
- * Tag: Greedy
+ * Tag: Hash DFS
  */
 
 
