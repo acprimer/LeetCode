@@ -15,3 +15,4 @@ My solutions to [LeetCode Online Judge](https://oj.leetcode.com/)
 | [Clone Graph](https://oj.leetcode.com/problems/clone-graph/)  | 2014-11-13 | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/CloneGraph.java) | `Hash` `DFS` |
 | [Surrounded Regions](https://oj.leetcode.com/problems/surrounded-regions/)  | 2014-11-13 | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SurroundedRegions.java) | `BFS` |
 | [Sum Root to Leaf Numbers](https://oj.leetcode.com/problems/sum-root-to-leaf-numbers/)  | 2014-11-13 | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SumRootToLeafNumbers.java) | `DFS` |
+| [Longest Consecutive Sequence](https://oj.leetcode.com/problems/longest-consecutive-sequence//)  | 2014-11-13 | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LongestConsecutiveSequence.java) | `Array` |
