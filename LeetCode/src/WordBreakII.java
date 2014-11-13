@@ -7,14 +7,16 @@ import java.util.Set;
  * Created by yaodh on 2014/11/12.
  *
  * LeetCode: Word Break II
- * link: https://oj.leetcode.com/problems/word-break-ii/
- * description:
+ * Link: https://oj.leetcode.com/problems/word-break-ii/
+ * Description:
+ * -----------------------------
  * Given a string s and a dictionary of words dict,
  * Return all such possible sentences.
  * For example, given
  * s = "leetcode",
  * dict = ["leet", "code"].
  * A solution is ["cats and dog", "cat sand dog"].
+ * -----------------------------
  *
  * Tag: Dynamic Programming | Backtracking
  */
