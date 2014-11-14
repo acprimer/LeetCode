@@ -15,6 +15,7 @@
  */
 public class PalindromePartitioningII {
 
+    // Time: O(n^2) Space: O(n^2)
     public int minCut(String s) {
         int len = s.length();
         // palindrome[i][j] : substring(i,j) is palindrome or not?

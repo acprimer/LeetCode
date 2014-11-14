@@ -18,3 +18,4 @@ My solutions to [LeetCode Online Judge](https://oj.leetcode.com/)
 | [Longest Consecutive Sequence](https://oj.leetcode.com/problems/longest-consecutive-sequence/)  | 2014-11-13 | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LongestConsecutiveSequence.java) | `Array` |
 | [Palindrome Partitioning](https://oj.leetcode.com/problems/palindrome-partitioning/)  | 2014-11-14 | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/PalindromePartitioning.java) | `Backtracking` |
 | [Palindrome Partitioning II](https://oj.leetcode.com/problems/palindrome-partitioning-ii/)  | 2014-11-14 | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/PalindromePartitioningII.java) | `DP` |
+| [Longest Palindromic Substring](https://oj.leetcode.com/problems/longest-palindromic-substring/)  | 2014-11-14 | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LongestPalindromicSubstring.java) | `DP` |
