@@ -1,38 +1,58 @@
-import java.util.ArrayList;
-import java.util.List;
-
 /**
- * Created by yao on 2014/11/14.
+ * Created by yaodh on 2014/11/14.
+ *
+ * LeetCode: Palindrome Partitioning II
+ * Link: https://oj.leetcode.com/problems/palindrome-partitioning-ii/
+ * Description:
+ * -----------------------------
+ * Given a string s, partition s such that every substring of the partition is a palindrome.
+ * Return the minimum cuts needed for a palindrome partitioning of s.
+ * For example, given s = "aab",
+ * Return 1 since the palindrome partitioning ["aa","b"] could be produced using 1 cut.
+ * -----------------------------
+ *
+ * Tag: Dynamic Programming
  */
 public class PalindromePartitioningII {
-    int ans = Integer.MAX_VALUE;
-    public int minCut(String s) {
-        dfs(s, 0);
-        return ans-1;
-    }
 
-    private void dfs(String s, int cnt) {
-        for(int i=0;i<s.length();i++) {
-            String palindromeString = s.substring(0, i+1);
-            if(testPalindrome(palindromeString)) {
-                int curCnt = cnt+1;
-                if(i == s.length() - 1) {
-                    ans = Math.min(ans, curCnt);
-                    return ;
-                }
-                dfs(s.substring(i+1, s.length()), curCnt);
+    public int minCut(String s) {
+        int len = s.length();
+        // palindrome[i][j] : substring(i,j) is palindrome or not?
+        boolean[][] palindrome = new boolean[len][len];
+        // calculate palindrome[][]
+        for(int i=0;i<len;i++) {
+            palindrome[i][i] = true;
+        }
+        for(int i=1;i<len;i++) {
+            if(s.charAt(i-1) == s.charAt(i)) {
+                palindrome[i-1][i] = true;
             }
         }
+        for(int k=2;k<len;k++) {
+            for(int i=0;i+k<len;i++) {
+                int j = i+k;
+                if(s.charAt(i) == s.charAt(j) && palindrome[i+1][j-1]) {
+                    palindrome[i][j] = true;
+                }
+            }
+        }
+
+        int[] dp = new int[len];
+        // each character is palindrome, so init state is dp[i] = i;
+        for(int i=0;i<len;i++) {
+            dp[i] = i;
+        }
+        for(int i=0;i<len;i++) {
+            for(int j=i;j<len;j++) {
+                if(palindrome[i][j]) {
+                    if(i==0) dp[j] = 0;
+                    else dp[j] = Math.min(dp[j], dp[i-1] + 1);
+                }
+            }
+        }
+        return dp[len-1];
     }
 
-    private boolean testPalindrome(String s) {
-        int i=0, j=s.length()-1;
-        while(i < j) {
-            if(s.charAt(i) != s.charAt(j)) return false;
-            i++; j--;
-        }
-        return true;
-    }
 
     public static void main(String[] args) {
         int ans = new PalindromePartitioningII().minCut("aab");
