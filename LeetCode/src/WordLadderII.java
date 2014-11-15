@@ -19,16 +19,19 @@ import java.util.*;
  * return its length 5.
  * -----------------------------
  *
- * Tag: BFS Hash Dijstra
+ * Tag: BFS
  */
 
-public class WordLadder {
+public class WordLadderII {
     class Node implements Comparable<Node>{
+        List<String> wordList;
         String label;
         int cost;
-        public Node(String label, int cost) {
+        public Node(String label, int cost, List<String> list) {
             this.label = label;
             this.cost = cost;
+            this.wordList = new ArrayList<String>(list);
+            wordList.add(label);
         }
 
         @Override
@@ -36,26 +39,35 @@ public class WordLadder {
             return this.cost > o.cost ? 1 : -1;
         }
     }
+
     final static char[] ALPHA = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
-    public int ladderLength(String start, String end, Set<String> dict) {
+
+    public List<List<String>> findLadders(String start, String end, Set<String> dict) {
+        List<List<String>> ans = new ArrayList<List<String>>();
         dict.add(end);
         Queue<Node> queue = new PriorityQueue<Node>();
-        queue.offer(new Node(start, 1));
+        queue.offer(new Node(start, 1, new ArrayList<String>()));
         Set<String> vis = new HashSet<String>();
+        int minLen = Integer.MAX_VALUE;
         while(!queue.isEmpty()) {
             Node node = queue.poll();
             String label = node.label;
             int cost = node.cost;
-            if(vis.contains(label)) continue;
+            if(cost > minLen) break;
+            List<String> wordList = node.wordList;
+//            if(vis.contains(label)) continue;
             vis.add(label);
-            if(label.equals(end)) return cost;
+            if(label.equals(end)) {
+                minLen = cost;
+                ans.add(wordList);
+            }
             List<String> nextNodes = getArc(label, dict);
             for(String next : nextNodes) {
-                if(vis.contains(next)) continue;
-                queue.offer(new Node(next, cost+1));
+//                if(vis.contains(next)) continue;
+                queue.offer(new Node(next, cost+1, wordList));
             }
         }
-        return 0;
+        return ans;
     }
 
     private List<String> getArc(String start, Set<String> set) {
@@ -83,8 +95,12 @@ public class WordLadder {
         set.add("dog");
         set.add("lot");
         set.add("log");
-        int ans = new WordLadder().ladderLength("hit", "cog", set);
-        System.out.println(ans);
+        List<List<String>> ans = new WordLadderII().findLadders("hit", "cog", set);
+        for(List<String> list : ans) {
+            for(String str : list) {
+                System.out.print(str + "-->");
+            }
+            System.out.println();
+        }
     }
-
 }
