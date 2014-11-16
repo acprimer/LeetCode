@@ -4,7 +4,7 @@ LeetCode
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/)
 
 
-| Title | Language | Tag | Time | Difficulty
+| Title | Language | Tag | Time |
 | ------|:--------:|:---:|:--:|
 | [Word Break](https://oj.leetcode.com/problems/word-break/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/WordBreak.java) | `DP` | O(n^2) |
 | [Word Break II](https://oj.leetcode.com/problems/word-break-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/WordBreakII.java) | `DP` `Backtracking` | O(n^2) |
