@@ -4,7 +4,7 @@ LeetCode
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/)
 
 
-| Title | Language | Tag | Time |
+| Title | Language | Tag | Time | Difficulty
 | ------|:--------:|:---:|:--:|
 | [Word Break](https://oj.leetcode.com/problems/word-break/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/WordBreak.java) | `DP` | O(n^2) |
 | [Word Break II](https://oj.leetcode.com/problems/word-break-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/WordBreakII.java) | `DP` `Backtracking` | O(n^2) |
@@ -24,4 +24,4 @@ My solutions to [LeetCode Online Judge](https://oj.leetcode.com/)
 | [Binary Tree Maximum Path Sum](https://oj.leetcode.com/problems/binary-tree-maximum-path-sum/) | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/BinaryTreeMaximumPathSum.java) | `DFS` | O(n^2) |
 | [Best Time to Buy and Sell Stock](https://oj.leetcode.com/problems/best-time-to-buy-and-sell-stock/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/BestTimeToBuyAndSellStock.java) | `Array` | O(n) |
 | [Best Time to Buy and Sell Stock II](https://oj.leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/BestTimeToBuyAndSellStockII.java) | `Greedy` | O(n) |
-| [Best Time to Buy and Sell Stock III](https://oj.leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/BestTimeToBuyAndSellStockIII.java) | `DP` | O(n) |
+| [Best Time to Buy and Sell Stock III](https://oj.leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/BestTimeToBuyAndSellStockIII.java) | `DP` | $$O(n)$$ |
