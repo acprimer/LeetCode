@@ -36,7 +36,7 @@ public class WordLadder {
             return this.cost > o.cost ? 1 : -1;
         }
     }
-    final static char[] ALPHA = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+
     public int ladderLength(String start, String end, Set<String> dict) {
         dict.add(end);
         Queue<Node> queue = new PriorityQueue<Node>();
@@ -63,9 +63,9 @@ public class WordLadder {
         char[] word = new char[start.length()];
         start.getChars(0, start.length(), word, 0);
         for(int i=0;i<start.length();i++) {
-            for(int j=0;j<26;j++) {
-                if(ALPHA[j] == start.charAt(i)) continue;
-                word[i] = ALPHA[j];
+            for(char ch = 'a'; ch <= 'z'; ch++) {
+                if(ch == start.charAt(i)) continue;
+                word[i] = ch;
                 String str = new String(word);
                 if(set.contains(str)) {
                     arc.add(str);

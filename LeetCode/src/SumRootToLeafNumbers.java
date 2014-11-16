@@ -20,19 +20,16 @@
  * Tag: DFS
  */
 
-
-//Definition for binary tree
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
 public class SumRootToLeafNumbers {
+    private class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
     int ans;
     public int sumNumbers(TreeNode root) {
         if(root == null) {
@@ -57,12 +54,17 @@ public class SumRootToLeafNumbers {
         }
     }
 
-    public static void main(String[] args) {
+    public TreeNode generateTree() {
         TreeNode root = new TreeNode(1);
         TreeNode node1 = new TreeNode(2);
         TreeNode node2 = new TreeNode(3);
         root.left = node1;
         root.right = node2;
+        return root;
+    }
+
+    public static void main(String[] args) {
+        TreeNode root = new SumRootToLeafNumbers().generateTree();
         int ans = new SumRootToLeafNumbers().sumNumbers(root);
         System.out.print(ans);
     }

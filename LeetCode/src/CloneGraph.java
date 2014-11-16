@@ -23,19 +23,16 @@ import java.util.Map;
  * Tag: Hash DFS
  */
 
-
-// Definition for undirected graph.
-class UndirectedGraphNode {
-    int label;
-    List<UndirectedGraphNode> neighbors;
-
-    UndirectedGraphNode(int x) {
-        label = x;
-        neighbors = new ArrayList<UndirectedGraphNode>();
-    }
-};
-
 public class CloneGraph {
+    private class UndirectedGraphNode {
+        int label;
+        List<UndirectedGraphNode> neighbors;
+
+        UndirectedGraphNode(int x) {
+            label = x;
+            neighbors = new ArrayList<UndirectedGraphNode>();
+        }
+    }
     int cnt = 0;
     Map<UndirectedGraphNode, Integer> map = new HashMap<UndirectedGraphNode, Integer>();
     List<UndirectedGraphNode> list = new ArrayList<UndirectedGraphNode>();
@@ -73,6 +70,12 @@ public class CloneGraph {
     }
 
     public static void main(String[] args) {
+        UndirectedGraphNode graph = new CloneGraph().generateGraph();
+        UndirectedGraphNode node4 = new CloneGraph().cloneGraph(graph);
+        dfsPrint(node4);
+    }
+
+    public UndirectedGraphNode generateGraph() {
         UndirectedGraphNode node0 = new UndirectedGraphNode(0);
         UndirectedGraphNode node1 = new UndirectedGraphNode(1);
         UndirectedGraphNode node2 = new UndirectedGraphNode(2);
@@ -80,9 +83,7 @@ public class CloneGraph {
         node0.neighbors.add(node2);
         node1.neighbors.add(node2);
         node2.neighbors.add(node2);
-
-        UndirectedGraphNode node4 = new CloneGraph().cloneGraph(node0);
-        dfsPrint(node4);
+        return node0;
     }
 
     private static void dfsPrint(UndirectedGraphNode node) {
