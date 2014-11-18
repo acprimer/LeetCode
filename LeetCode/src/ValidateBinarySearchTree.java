@@ -24,39 +24,30 @@ public class ValidateBinarySearchTree {
             val = x;
         }
     }
-    int maxVal, minVal;
+    int pre;
+    boolean first = true;
     public boolean isValidBST(TreeNode root) {
         if(root == null) return true;
         return dfs(root);
     }
 
     private boolean dfs(TreeNode root) {
-        int leftMin = root.val;
         if(root.left != null) {
-            if(dfs(root.left)) {
-                if (root.val <= maxVal) {
-                    return false;
-                }
-                leftMin = minVal;
-            }
-            else {
-                return false;
-            }
+            if(!dfs(root.left)) return false;
         }
-        int rightMax = root.val;
+        if(first) {
+            pre = root.val;
+            first = false;
+        }
+        else {
+            if(root.val > pre) {
+                pre = root.val;
+            }
+            else return false;
+        }
         if(root.right != null) {
-            if(dfs(root.right)) {
-                if (minVal <= root.val) {
-                    return false;
-                }
-                rightMax = maxVal;
-            }
-            else {
-                return false;
-            }
+            if(!dfs(root.right)) return false;
         }
-        minVal = leftMin;
-        maxVal = rightMax;
         return true;
     }
 
