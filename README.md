@@ -46,5 +46,5 @@ My solutions to [LeetCode Online Judge](https://oj.leetcode.com/)
 | [Construct Binary Tree from Preorder and Inorder Traversal](https://oj.leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ConstructBinaryTreeFromPreorderInorderTraversal.java) | `DFS` |
 | [Symmetric Tree](https://oj.leetcode.com/problems/symmetric-tree/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SymmetricTree.java) | `DFS` |
 | [Same Tree](https://oj.leetcode.com/problems/same-tree/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SameTree.java) | `DFS` |
-| [Validate Binary Search Tree](https://oj.leetcode.com/problems/validate-binary-search-tree/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ValidateBinarySearchTree.java) | `DFS` |
-| [Recover Binary Search Tree](https://oj.leetcode.com/problems/recover-binary-search-tree/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RecoverBinarySearchTree.java) | `DFS` |
+| [Validate Binary Search Tree](https://oj.leetcode.com/problems/validate-binary-search-tree/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ValidateBinarySearchTree.java) | `DFS` `BST` |
+| [Recover Binary Search Tree](https://oj.leetcode.com/problems/recover-binary-search-tree/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RecoverBinarySearchTree.java) | `DFS` `BST` |
