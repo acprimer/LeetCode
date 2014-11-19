@@ -1,72 +1,46 @@
 /**
  * Created by yaodh on 2014/11/18.
+ *
+ * LeetCode: Interleaving String
+ * Link: https://oj.leetcode.com/problems/interleaving-string/
+ * Description:
+ * -----------------------------
+ * Given s1, s2, s3, find whether s3 is formed by the interleaving of s1 and s2.
+ * For example,
+ * Given:
+ * s1 = "aabcc",
+ * s2 = "dbbca",
+ * When s3 = "aadbbcbcac", return true.
+ * When s3 = "aadbbbaccc", return false.
+ * -----------------------------
+ *
+ * Tag: Dynamic Programming
  */
 public class InterleavingString {
     public boolean isInterleave(String s1, String s2, String s3) {
         if (s1.length() + s2.length() != s3.length()) {
             return false;
         }
-        int size = s3.length();
-        boolean[][] dp = new boolean[size + 1][size + 1];
-        for (int i = 0; i < dp.length; i++) dp[0][i] = true;
-        for (int i = 1; i <= size; i++) {
-            if (i >= s1.length()) {
-                int j;
-                for (j = i; j <= size; j++) {
-                    if (s2.charAt(i - 1) == s3.charAt(j - 1) && dp[i - 1][j - 1]) {
-                        break;
-                    }
+        int row = s1.length();
+        int column = s2.length();
+        boolean[][] dp = new boolean[row+1][column+1];
+        dp[0][0] = true;
+        for(int i=0;i<=row;i++) {
+            for(int j=0;j<=column;j++) {
+                if(i>=1 && s1.charAt(i-1) == s3.charAt(i+j-1) && dp[i-1][j]) {
+                    dp[i][j] = true;
+                    continue;
                 }
-                if (j > size) return false;
-                for (; j <= size; j++) dp[i][j] = true;
-            }
-            if (i >= s2.length()) {
-                int j;
-                for (j = i; j <= size; j++) {
-                    if (s1.charAt(i - 1) == s3.charAt(j - 1) && dp[i - 1][j - 1]) {
-                        break;
-                    }
-                }
-                if (j > size) return false;
-                for (; j <= size; j++) dp[i][j] = true;
-            }
-            int j;
-            for (j = i; j <= size; j++) {
-                if (s1.charAt(i - 1) == s3.charAt(j - 1) && dp[i - 1][j - 1]) {
-                    break;
+                if(j>=1 && s2.charAt(j-1) == s3.charAt(i+j-1) && dp[i][j-1]) {
+                    dp[i][j] = true;
                 }
             }
-            if (j > size) return false;
-            int idx1 = j;
-            for (j = i; j <= size; j++) {
-                if (s2.charAt(i - 1) == s3.charAt(j - 1) && dp[i - 1][j - 1]) {
-                    break;
-                }
-            }
-            if (j > size) return false;
-            int idx2 = j;
-            if (s1.charAt(i - 1) != s2.charAt(i - 1)) {
-                j = Math.max(idx1, idx2);
-                for (; j <= size; j++) dp[i][j] = true;
-            } else {
-                for (; j <= size; j++) {
-                    if (s1.charAt(i - 1) == s3.charAt(j - 1)) {
-                        break;
-                    }
-                }
-                if (j > size) return false;
-                for (; j <= size; j++) dp[i][j] = true;
-            }
-            for(int k=1;k<=size;k++) {
-                System.out.print(dp[i][k] + " ");
-            }
-            System.out.println();
         }
-        return true;
+        return dp[row][column];
     }
 
     public static void main(String[] args) {
-        boolean ans = new InterleavingString().isInterleave("aabcc", "dbbca", "aadbbcbcac");
+        boolean ans = new InterleavingString().isInterleave("aabcc", "dbbca", "aadbbbaccc");
         System.out.println(ans);
     }
 }

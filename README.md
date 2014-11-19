@@ -48,3 +48,9 @@ My solutions to [LeetCode Online Judge](https://oj.leetcode.com/)
 | [Same Tree](https://oj.leetcode.com/problems/same-tree/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SameTree.java) | `DFS` |
 | [Validate Binary Search Tree](https://oj.leetcode.com/problems/validate-binary-search-tree/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ValidateBinarySearchTree.java) | `DFS` `BST` |
 | [Recover Binary Search Tree](https://oj.leetcode.com/problems/recover-binary-search-tree/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RecoverBinarySearchTree.java) | `DFS` `BST` |
+| [Insert Interval](https://oj.leetcode.com/problems/insert-interval/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/InsertInterval.java) | `Array` |
+| [Restore IP Addresses](https://oj.leetcode.com/problems/restore-ip-addresses/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RestoreIPAddresses.java) | `Backtracking` |
+| [Reverse Nodes in k-Group](https://oj.leetcode.com/problems/reverse-nodes-in-k-group/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ReverseNodesInKGroup.java) | `List` |
+| [Interleaving String](https://oj.leetcode.com/problems/interleaving-string/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/InterleavingString.java) | `DP` |
+| [Unique Binary Search Trees](https://oj.leetcode.com/problems/unique-binary-search-trees/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/UniqueBinarySearchTrees.java) | `Math` |
+| [Unique Binary Search Trees II](https://oj.leetcode.com/problems/unique-binary-search-trees-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/UniqueBinarySearchTreesII.java) | `DFS` |
