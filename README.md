@@ -56,3 +56,8 @@ My solutions to [LeetCode Online Judge](https://oj.leetcode.com/)
 | [Unique Binary Search Trees II](https://oj.leetcode.com/problems/unique-binary-search-trees-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/UniqueBinarySearchTreesII.java) | `DFS` |
 | [Reverse Linked List II](https://oj.leetcode.com/problems/reverse-linked-list-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/BinaryTreeInorderTraversal.java) | `Linked List` |
 | [Binary Tree Inorder Traversal](https://oj.leetcode.com/problems/binary-tree-inorder-traversal/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ReverseLinkedListII.java) | `DFS` |
+| [Subsets](https://oj.leetcode.com/problems/subsets/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/Subsets.java) | `Bit` |
+| [Subsets II](https://oj.leetcode.com/problems/subsets-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SubsetsII.java) | `Bit` |
+| [Decode Ways](https://oj.leetcode.com/problems/decode-ways/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/DecodeWays.java) | `DP` |
+| [Gray Code](https://oj.leetcode.com/problems/gray-code/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/GrayCode.java) | `Backtracing` |
+| [Merge Sorted Array](https://oj.leetcode.com/problems/merge-sorted-array/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MergeSortedArray.java) | `Two Pointers` |
