@@ -54,7 +54,6 @@ public class PalindromePartitioningII {
         return dp[len-1];
     }
 
-
     public static void main(String[] args) {
         int ans = new PalindromePartitioningII().minCut("aab");
         System.out.println(ans);
