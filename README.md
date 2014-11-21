@@ -62,3 +62,4 @@ My solutions to [LeetCode Online Judge](https://oj.leetcode.com/)
 | [Gray Code](https://oj.leetcode.com/problems/gray-code/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/GrayCode.java) | `Backtracing` |
 | [Merge Sorted Array](https://oj.leetcode.com/problems/merge-sorted-array/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MergeSortedArray.java) | `Two Pointers` |
 | [Partition List](https://oj.leetcode.com/problems/partition-list/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/PartitionList.java) | `LinkedList` |
+| [Min Stack](https://oj.leetcode.com/problems/min-stack/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MinStack.java) | `Stack` |
