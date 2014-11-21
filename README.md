@@ -68,3 +68,4 @@ My solutions to [LeetCode Online Judge](https://oj.leetcode.com/)
 | [Remove Duplicates from Sorted Array](https://oj.leetcode.com/problems/remove-duplicates-from-sorted-array/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RemoveDuplicatesFromSortedArray.java) | `Array` |
 | [Remove Duplicates from Sorted Array II](https://oj.leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RemoveDuplicatesFromSortedArrayII.java) | `Array` |
 | [Scramble String](https://oj.leetcode.com/problems/scramble-string/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ScrambleString.java) | `DFS` `DP` |
+| [Combinations](https://oj.leetcode.com/problems/combinations/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/Combinations.java) | `DFS` |

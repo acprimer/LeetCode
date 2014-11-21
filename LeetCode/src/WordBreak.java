@@ -26,6 +26,7 @@ public class WordBreak {
     // dynamic programming
     List<Integer>[] hash;
     public boolean wordBreak(String s, Set<String> dict) {
+        List<Integer>[] dp = new ArrayList[2];
         int n = s.length();
         hash = new ArrayList[n + 1];
         for(int i=0;i<n+1;i++) {
