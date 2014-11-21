@@ -63,3 +63,5 @@ My solutions to [LeetCode Online Judge](https://oj.leetcode.com/)
 | [Merge Sorted Array](https://oj.leetcode.com/problems/merge-sorted-array/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MergeSortedArray.java) | `Two Pointers` |
 | [Partition List](https://oj.leetcode.com/problems/partition-list/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/PartitionList.java) | `LinkedList` |
 | [Min Stack](https://oj.leetcode.com/problems/min-stack/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MinStack.java) | `Stack` |
+| [Remove Duplicates from Sorted List](https://oj.leetcode.com/problems/remove-duplicates-from-sorted-list/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RemoveDuplicatesFromSortedList.java) | `LinkedList` |
+| [Remove Duplicates from Sorted List II](https://oj.leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RemoveDuplicatesFromSortedListII.java) | `LinkedList` |
