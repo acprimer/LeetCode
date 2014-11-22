@@ -15,6 +15,46 @@
  * Tag: Stack
  */
 public class LargestRectangleInHistogram {
+    // record the count of heights form index of the minimum height to current index
+    public int largestRectangleArea(int[] height) {
+        if (height == null || height.length <= 0) return 0;
+        int size = height.length;
+        int[] minHeigh = new int[size];
+        int[] count = new int[size];
+        int top = -1;
+        int ans = 0;
+        for (int i = 0; i <= size; i++) {
+            int curHeight = 0;
+            if (i < size) curHeight = height[i];
+            if (top >= 0 && curHeight == minHeigh[top]) {
+                count[top]++;
+                continue;
+            }
+            if (top == -1 || curHeight > minHeigh[top]) {
+                minHeigh[++top] = curHeight;
+                count[top] = 1;
+            } else {
+                int total = 0;
+                while (top >= 0) {
+                    if (curHeight < minHeigh[top]) {
+                        total += count[top];
+                        ans = Math.max(ans, minHeigh[top] * total);
+                        top--;
+                    } else break;
+                }
+                minHeigh[++top] = curHeight;
+                count[top] = total + 1;
+            }
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        int ans = new LargestRectangleInHistogram().largestRectangleArea(new int[]{1, 1});
+        System.out.println(ans);
+    }
+    /*
+    // record the index of the minimum height
     public int largestRectangleArea(int[] height) {
         if (height == null || height.length <= 0) return 0;
         int size = height.length;
@@ -36,7 +76,8 @@ public class LargestRectangleInHistogram {
                     if (curHeight < minHeigh[count]) {
                         ans = Math.max(ans, minHeigh[count] * (i - idx[count]));
                         count--;
-                    } else break;
+                    }
+                    else break;
                 }
                 minHeigh[++count] = curHeight;
                 // Attention: we do not update idx[count]
@@ -45,9 +86,5 @@ public class LargestRectangleInHistogram {
         }
         return ans;
     }
-
-    public static void main(String[] args) {
-        int ans = new LargestRectangleInHistogram().largestRectangleArea(new int[]{2, 1, 2});
-        System.out.println(ans);
-    }
+    */
 }

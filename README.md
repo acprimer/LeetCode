@@ -74,3 +74,4 @@ My solutions to [LeetCode Online Judge](https://oj.leetcode.com/)
 | [Search in Rotated Sorted Array](https://oj.leetcode.com/problems/search-in-rotated-sorted-array/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SearchInRotatedSortedArray.java) | `Binary Search` |
 | [Search in Rotated Sorted Array II](https://oj.leetcode.com/problems/search-in-rotated-sorted-array-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SearchInRotatedSortedArrayII.java) | `Binary Search` |
 | [Largest Rectangle in Histogram](https://oj.leetcode.com/problems/largest-rectangle-in-histogram/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LargestRectangleInHistogram.java) | `Stack` |
+| [Maximal Rectangle](https://oj.leetcode.com/problems/maximal-rectangle/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MaximalRectangle.java) | `Stack` |
