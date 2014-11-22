@@ -17,6 +17,23 @@
  */
 public class SortColors {
     public void sortColors(int[] A) {
+        int[] idx = new int[4];
+        int[] count = new int[3];
+        for (int i = 0; i < A.length; i++) {
+            int tmp = A[i];
+            for (int j = tmp + 1; j < 3; j++) {
+                if (idx[j + 1] > idx[j]) {
+                    A[idx[j]] = tmp;
+                    A[i] = j;
+                }
+            }
+            count[tmp]++;
+            idx[1] = count[0];
+            idx[2] = idx[1] + count[1];
+            idx[3] = i + 1;
+        }
+    }
+    /*public void sortColors(int[] A) {
         int[] colors = new int[3];
         for (int i = 0; i < A.length; i++) {
             colors[A[i]]++;
@@ -27,10 +44,10 @@ public class SortColors {
                 A[idx++] = i;
             }
         }
-    }
+    }*/
 
     public static void main(String[] args) {
-        int[] A = new int[]{1, 1, 0, 2};
+        int[] A = new int[]{2, 0, 2, 1, 0, 2, 2, 0, 1, 2};
         new SortColors().sortColors(A);
         for (int i = 0; i < A.length; i++) {
             System.out.print(A[i] + " ");
