@@ -1,8 +1,9 @@
 LeetCode
 ========
 
-My solutions to [LeetCode Online Judge](https://oj.leetcode.com/)
-I have solved 89 / 157 problems before 2014/11/22.
+My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
+
+**I have solved 89 / 157 problems before 2014/11/22.**
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
