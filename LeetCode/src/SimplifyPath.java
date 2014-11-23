@@ -19,7 +19,7 @@ import java.util.Stack;
  * In this case, you should ignore redundant slashes and return "/home/foo".
  * -----------------------------
  * <p/>
- * Tag: Array
+ * Tag: Stack
  */
 public class SimplifyPath {
     public String simplifyPath(String path) {

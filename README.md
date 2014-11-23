@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **89 / 157** problems before 2014/11/22.
+I have solved **90 / 157** problems before 2014/11/22.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -77,3 +77,9 @@ I have solved **89 / 157** problems before 2014/11/22.
 | [Largest Rectangle in Histogram](https://oj.leetcode.com/problems/largest-rectangle-in-histogram/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LargestRectangleInHistogram.java) | `Stack` |
 | [Maximal Rectangle](https://oj.leetcode.com/problems/maximal-rectangle/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MaximalRectangle.java) | `Stack` |
 | [Minimum Window Substring](https://oj.leetcode.com/problems/minimum-window-substring/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MinimumWindowSubstring.java) | `String` |
+| [Search a 2D Matrix](https://oj.leetcode.com/problems/search-a-2d-matrix/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SearchA2DMatrix.java) | `Array` |
+| [Set Matrix Zeroes](https://oj.leetcode.com/problems/set-matrix-zeroes/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SetMatrixZeroes.java) | `Array` |
+| [Edit Distance](https://oj.leetcode.com/problems/edit-distance/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/EditDistance.java) | `DP` |
+| [Simplify Path](https://oj.leetcode.com/problems/simplify-path/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SimplifyPath.java) | `Stack` |
+| [Climbing Stairs](https://oj.leetcode.com/problems/climbing-stairs/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ClimbingStairs.java) | `Math` |
+| [Sqrt(x)](https://oj.leetcode.com/problems/sqrtx/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SqrtOfX.java) | `Binary Search` |

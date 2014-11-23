@@ -9,7 +9,7 @@
  * Compute and return the square root of x.
  * -----------------------------
  * <p/>
- * Tag: Math
+ * Tag: Binary Search
  */
 public class SqrtOfX {
     public int sqrt(int x) {
