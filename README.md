@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **104 / 157** problems before 2014/11/23.
+I have solved **105 / 157** problems before 2014/11/23.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -91,3 +91,4 @@ I have solved **104 / 157** problems before 2014/11/23.
 | [Minimum Path Sum](https://oj.leetcode.com/problems/minimum-path-sum/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MinimumPathSum.java) | `DP` |
 | [Unique Paths](https://oj.leetcode.com/problems/unique-paths/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/UniquePaths.java) | `Math` `DP`|
 | [Unique Paths II](https://oj.leetcode.com/problems/unique-paths-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/UniquePathsII.java) | `DP`|
+| [Rotate List](https://oj.leetcode.com/problems/rotate-list/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RotateList.java) | `LinkedList`|
