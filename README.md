@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **90 / 157** problems before 2014/11/22.
+I have solved **97 / 157** problems before 2014/11/23.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -83,3 +83,4 @@ I have solved **90 / 157** problems before 2014/11/22.
 | [Simplify Path](https://oj.leetcode.com/problems/simplify-path/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SimplifyPath.java) | `Stack` |
 | [Climbing Stairs](https://oj.leetcode.com/problems/climbing-stairs/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ClimbingStairs.java) | `Math` |
 | [Sqrt(x)](https://oj.leetcode.com/problems/sqrtx/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SqrtOfX.java) | `Binary Search` |
+| [Text Justification](https://oj.leetcode.com/problems/text-justification/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/TextJustification.java) | `Greedy` |
