@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **101 / 157** problems before 2014/11/23.
+I have solved **104 / 157** problems before 2014/11/23.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -88,3 +88,6 @@ I have solved **101 / 157** problems before 2014/11/23.
 | [Valid Number](https://oj.leetcode.com/problems/valid-number/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ValidNumber.java) | `Math` `String` |
 | [Add Binary](https://oj.leetcode.com/problems/add-binary/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/AddBinary.java) | `Math` `String` |
 | [Merge Two Sorted Lists](https://oj.leetcode.com/problems/merge-two-sorted-lists/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MergeTwoSortedLists.java) | `LinkedList` |
+| [Minimum Path Sum](https://oj.leetcode.com/problems/minimum-path-sum/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MinimumPathSum.java) | `DP` |
+| [Unique Paths](https://oj.leetcode.com/problems/unique-paths/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/UniquePaths.java) | `Math` `DP`|
+| [Unique Paths II](https://oj.leetcode.com/problems/unique-paths-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/UniquePathsII.java) | `DP`|
