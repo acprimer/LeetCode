@@ -26,12 +26,11 @@ public class SqrtOfX {
                 left = mid + 1;
             }
         }
-        if (left * left == x) return x;
         return left - 1;
     }
 
     public static void main(String[] args) {
-        int ans = new SqrtOfX().sqrt(4);
+        int ans = new SqrtOfX().sqrt(3);
         System.out.println(ans);
     }
 }

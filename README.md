@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **99 / 157** problems before 2014/11/23.
+I have solved **101 / 157** problems before 2014/11/23.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -86,3 +86,5 @@ I have solved **99 / 157** problems before 2014/11/23.
 | [Text Justification](https://oj.leetcode.com/problems/text-justification/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/TextJustification.java) | `Greedy` |
 | [Plus One](https://oj.leetcode.com/problems/plus-one/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/PlusOne.java) | `Math` |
 | [Valid Number](https://oj.leetcode.com/problems/valid-number/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ValidNumber.java) | `Math` `String` |
+| [Add Binary](https://oj.leetcode.com/problems/add-binary/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/AddBinary.java) | `Math` `String` |
+| [Merge Two Sorted Lists](https://oj.leetcode.com/problems/merge-two-sorted-lists/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MergeTwoSortedLists.java) | `LinkedList` |

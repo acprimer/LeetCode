@@ -45,20 +45,17 @@ public class TextJustification {
                 }
                 j++;
             }
-            int spaceCount, left, remaing;
+            int spaceCount, left;
             if (j >= words.length) {
                 // the last line
                 spaceCount = 1;
                 left = 0;
-                remaing = L - len;
             } else if (j - i - 1 == 0) {
                 spaceCount = 1;
                 left = 0;
-                remaing = L - len;
             } else {
                 spaceCount = (L - len) / (j - i - 1) + 1;
                 left = (L - len) % (j - i - 1);
-                remaing = 0;
             }
             char[] spaces1 = new char[spaceCount];
             char[] spaces2 = new char[spaceCount + 1];
@@ -71,7 +68,8 @@ public class TextJustification {
                 builder.append(left >= k - i ? spaces2 : spaces1);
                 builder.append(words[k]);
             }
-            for (int k = 0; k < remaing; k++) {
+            int remaining = L - builder.length();
+            for (int k = 0; k < remaining; k++) {
                 builder.append(' ');
             }
             i = j;
