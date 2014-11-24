@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **114 / 157** problems before 2014/11/24.
+I have solved **115 / 157** problems before 2014/11/24.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -101,3 +101,4 @@ I have solved **114 / 157** problems before 2014/11/24.
 | [Length of Last Word](https://oj.leetcode.com/problems/length-of-last-word/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LengthOfLastWord.java) | `String`|
 | [Merge Intervals](https://oj.leetcode.com/problems/merge-intervals/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MergeIntervals.java) | `Greedy`|
 | [Jump Game](https://oj.leetcode.com/problems/jump-game/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/JumpGame.java) | `Greedy`|
+| [N-Queens](https://oj.leetcode.com/problems/n-queens/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/NQueens.java) | `Backtracking`|
