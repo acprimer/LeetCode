@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **116 / 157** problems before 2014/11/24.
+I have solved **120 / 157** problems before 2014/11/24.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -103,3 +103,6 @@ I have solved **116 / 157** problems before 2014/11/24.
 | [Jump Game](https://oj.leetcode.com/problems/jump-game/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/JumpGame.java) | `Greedy`|
 | [N-Queens](https://oj.leetcode.com/problems/n-queens/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/NQueens.java) | `Backtracking`|
 | [N-Queens II](https://oj.leetcode.com/problems/n-queens-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/NQueensII.java) | `Backtracking`|
+| [Pow(x, n)](https://oj.leetcode.com/problems/powx-n/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/Pow.java) | `Bit`|
+| [Rotate Image](https://oj.leetcode.com/problems/rotate-image/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RotateImage.java) | `Array`|
+| [Anagrams](https://oj.leetcode.com/problems/anagrams/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/Anagrams.java) | `Hash`|
