@@ -3,7 +3,19 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by yao on 2014/11/23.
+ * Created by yaodh on 2014/11/23.
+ * <p/>
+ * LeetCode: Permutations
+ * Link: https://oj.leetcode.com/problems/permutations/
+ * Description:
+ * -----------------------------
+ * Given a collection of numbers, return all possible permutations.
+ * For example,
+ * [1,2,3] have the following permutations:
+ * [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], and [3,2,1].
+ * -----------------------------
+ * <p/>
+ * Tag: Backtracking
  */
 public class Permutations {
     List<List<Integer>> ans = new ArrayList<List<Integer>>();

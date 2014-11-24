@@ -1,5 +1,24 @@
 /**
- * Created by yao on 2014/11/23.
+ * Created by yaodh on 2014/11/23.
+ * <p/>
+ * LeetCode: Permutation Sequence
+ * Link: https://oj.leetcode.com/problems/permutation-sequence/
+ * Description:
+ * -----------------------------
+ * The set [1,2,3,…,n] contains a total of n! unique permutations.
+ * By listing and labeling all of the permutations in order,
+ * We get the following sequence (ie, for n = 3):
+ * "123"
+ * "132"
+ * "213"
+ * "231"
+ * "312"
+ * "321"
+ * Given n and k, return the kth permutation sequence.
+ * Note: Given n will be between 1 and 9 inclusive.
+ * -----------------------------
+ * <p/>
+ * Tag: Math
  */
 public class PermutationSequence {
     // method 2: generate the kth permutation

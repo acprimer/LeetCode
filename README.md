@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **105 / 157** problems before 2014/11/23.
+I have solved **113 / 157** problems before 2014/11/24.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -92,3 +92,11 @@ I have solved **105 / 157** problems before 2014/11/23.
 | [Unique Paths](https://oj.leetcode.com/problems/unique-paths/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/UniquePaths.java) | `Math` `DP`|
 | [Unique Paths II](https://oj.leetcode.com/problems/unique-paths-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/UniquePathsII.java) | `DP`|
 | [Rotate List](https://oj.leetcode.com/problems/rotate-list/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RotateList.java) | `LinkedList`|
+| [Permutations](https://oj.leetcode.com/problems/permutations/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/Permutations.java) | `Backtracking`|
+| [Permutations II](https://oj.leetcode.com/problems/permutations-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/PermutationsII.java) | `Backtracking` `Hash`|
+| [Next Permutation](https://oj.leetcode.com/problems/next-permutation/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/NextPermutation.java) | `Math`|
+| [Permutation Sequence](https://oj.leetcode.com/problems/permutation-sequence/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/PermutationSequence.java) | `Math`|
+| [Spiral Matrix](https://oj.leetcode.com/problems/spiral-matrix/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SpiralMatrix.java) | `Array`|
+| [Spiral Matrix II](https://oj.leetcode.com/problems/spiral-matrix-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SpiralMatrixII.java) | `Array`|
+| [Length of Last Word](https://oj.leetcode.com/problems/length-of-last-word/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LengthOfLastWord.java) | `String`|
+| [Merge Intervals](https://oj.leetcode.com/problems/merge-intervals/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MergeIntervals.java) | `Greedy`|

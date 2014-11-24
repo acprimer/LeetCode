@@ -3,7 +3,19 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by yao on 2014/11/23.
+ * Created by yaodh on 2014/11/23.
+ * <p/>
+ * LeetCode: Merge Intervals
+ * Link: https://oj.leetcode.com/problems/merge-intervals/
+ * Description:
+ * -----------------------------
+ * Given a collection of intervals, merge all overlapping intervals.
+ * For example,
+ * Given [1,3],[2,6],[8,10],[15,18],
+ * return [1,6],[8,10],[15,18].
+ * -----------------------------
+ * <p/>
+ * Tag: Greedy
  */
 public class MergeIntervals {
     class Interval {
@@ -51,13 +63,13 @@ public class MergeIntervals {
                 largest = Math.max(largest, list.get(i).end);
                 intervals.get(count).end = largest;
             } else {
-                intervals.get(count-1).end = largest;
+                intervals.get(count - 1).end = largest;
                 intervals.get(count++).start = list.get(i).start;
                 largest = list.get(i).end;
             }
         }
-        intervals.get(count-1).end = largest;
-        for(int i=intervals.size()-count;i>0;i--) {
+        intervals.get(count - 1).end = largest;
+        for (int i = intervals.size() - count; i > 0; i--) {
             intervals.remove(count);
         }
         return intervals;
