@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **121 / 157** problems before 2014/11/24.
+I have solved **122 / 157** problems before 2014/11/24.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -107,3 +107,4 @@ I have solved **121 / 157** problems before 2014/11/24.
 | [Rotate Image](https://oj.leetcode.com/problems/rotate-image/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RotateImage.java) | `Array`|
 | [Anagrams](https://oj.leetcode.com/problems/anagrams/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/Anagrams.java) | `Hash`|
 | [Jump Game II](https://oj.leetcode.com/problems/jump-game-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/JumpGameII.java) | `GreedyK`|
+| [Multiply Strings](https://oj.leetcode.com/problems/multiply-strings/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MultiplyStrings.java) | `String`|
