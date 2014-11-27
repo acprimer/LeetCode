@@ -116,3 +116,5 @@ I have solved **129 / 159** problems before 2014/11/27.
 | [Search Insert Position](https://oj.leetcode.com/problems/search-insert-position/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SearchInsertPosition.java) | `Binary Search`|
 | [Divide Two Integers](https://oj.leetcode.com/problems/valid-sudoku/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/DivideTwoIntegers.java) | `Binary`|
 | [ZigZag Conversion](https://oj.leetcode.com/problems/zigzag-conversion/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ZigZagConversion.java) | `String`|
+| [Reverse Integer](https://oj.leetcode.com/problems/reverse-integer/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ReverseInteger.java) | `Math`|
+| [String to Integer (atoi)](https://oj.leetcode.com/problems/string-to-integer-atoi/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/StringToInteger.java) | `Math`|
