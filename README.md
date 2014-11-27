@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **122 / 157** problems before 2014/11/24.
+I have solved **127 / 159** problems before 2014/11/27.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
