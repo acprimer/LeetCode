@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **129 / 159** problems before 2014/11/27.
+I have solved **133 / 159** problems before 2014/11/27.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -118,3 +118,4 @@ I have solved **129 / 159** problems before 2014/11/27.
 | [ZigZag Conversion](https://oj.leetcode.com/problems/zigzag-conversion/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ZigZagConversion.java) | `String`|
 | [Reverse Integer](https://oj.leetcode.com/problems/reverse-integer/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ReverseInteger.java) | `Math`|
 | [String to Integer (atoi)](https://oj.leetcode.com/problems/string-to-integer-atoi/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/StringToInteger.java) | `Math`|
+| [Palindrome Number](https://oj.leetcode.com/problems/palindrome-number/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/PalindromeNumber.java) | `Math`|
