@@ -108,3 +108,8 @@ I have solved **122 / 157** problems before 2014/11/24.
 | [Anagrams](https://oj.leetcode.com/problems/anagrams/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/Anagrams.java) | `Hash`|
 | [Jump Game II](https://oj.leetcode.com/problems/jump-game-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/JumpGameII.java) | `GreedyK`|
 | [Multiply Strings](https://oj.leetcode.com/problems/multiply-strings/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MultiplyStrings.java) | `String`|
+| [Combination Sum](https://oj.leetcode.com/problems/combination-sum/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/CombinationSum.java) | `Backtracking`|
+| [Combination Sum II](https://oj.leetcode.com/problems/combination-sum-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/CombinationSumII.java) | `Backtracking`|
+| [Count and Say](https://oj.leetcode.com/problems/count-and-say/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/CountAndSay.java) | `String`|
+| [Valid Sudoku](https://oj.leetcode.com/problems/valid-sudoku/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ValidSudoku.java) | `Hash`|
+| [Search Insert Position](https://oj.leetcode.com/problems/search-insert-position/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SearchInsertPosition.java) | `Binary Search`|
