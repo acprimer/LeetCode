@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **127 / 159** problems before 2014/11/27.
+I have solved **128 / 159** problems before 2014/11/27.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -112,4 +112,5 @@ I have solved **127 / 159** problems before 2014/11/27.
 | [Combination Sum II](https://oj.leetcode.com/problems/combination-sum-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/CombinationSumII.java) | `Backtracking`|
 | [Count and Say](https://oj.leetcode.com/problems/count-and-say/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/CountAndSay.java) | `String`|
 | [Valid Sudoku](https://oj.leetcode.com/problems/valid-sudoku/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ValidSudoku.java) | `Hash`|
+| [Sudoku Solver](https://oj.leetcode.com/problems/sudoku-solver/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SudokuSolver.java) | `Backtracking`|
 | [Search Insert Position](https://oj.leetcode.com/problems/search-insert-position/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SearchInsertPosition.java) | `Binary Search`|
