@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **128 / 159** problems before 2014/11/27.
+I have solved **129 / 159** problems before 2014/11/27.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -114,3 +114,5 @@ I have solved **128 / 159** problems before 2014/11/27.
 | [Valid Sudoku](https://oj.leetcode.com/problems/valid-sudoku/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ValidSudoku.java) | `Hash`|
 | [Sudoku Solver](https://oj.leetcode.com/problems/sudoku-solver/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SudokuSolver.java) | `Backtracking`|
 | [Search Insert Position](https://oj.leetcode.com/problems/search-insert-position/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SearchInsertPosition.java) | `Binary Search`|
+| [Divide Two Integers](https://oj.leetcode.com/problems/valid-sudoku/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/DivideTwoIntegers.java) | `Binary`|
+| [ZigZag Conversion](https://oj.leetcode.com/problems/zigzag-conversion/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ZigZagConversion.java) | `String`|
