@@ -1,8 +1,26 @@
-import java.util.HashSet;
-import java.util.Set;
-
 /**
- * Created by yao on 2014/11/27.
+ * Created by yaodh on 2014/11/28.
+ * <p/>
+ * LeetCode: Intersection of Two Linked Lists
+ * Link: https://oj.leetcode.com/problems/intersection-of-two-linked-lists/
+ * Description:
+ * -----------------------------
+ * Write a program to find the node at which the intersection of two singly linked lists begins.
+ * For example, the following two linked lists:
+ * A:          a1 → a2
+ *                   ↘
+ *                    c1 → c2 → c3
+ *                   ↗
+ * B:     b1 → b2 → b3
+ * begin to intersect at node c1.
+ * Notes:
+ * If the two linked lists have no intersection at all, return null.
+ * The linked lists must retain their original structure after the function returns.
+ * You may assume there are no cycles anywhere in the entire linked structure.
+ * Your code should preferably run in O(n) time and use only O(1) memory.
+ * -----------------------------
+ * <p/>
+ * Tag: LinkedList
  */
 public class IntersectionOfTwoLinkedLists {
     private class ListNode {
@@ -16,42 +34,47 @@ public class IntersectionOfTwoLinkedLists {
     }
 
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        Set<ListNode> set = new HashSet<ListNode>();
-        ListNode p = headA, q = headB;
-        while (p != null || q != null) {
-            if (p != null) {
-                if (set.contains(p)) return p;
-                set.add(p);
-                p = p.next;
-            }
-            if (q != null) {
-                if (set.contains(q)) return q;
-                set.add(q);
-                q = q.next;
+        if (headA == null || headB == null) return null;
+        ListNode p = headA, q = headA;
+        while (p != null) {
+            q = p;
+            p = p.next;
+        }
+        q.next = headB;
+        ListNode ans = detectCycle(headA);
+        q.next = null;
+        return ans;
+    }
+
+    public ListNode detectCycle(ListNode head) {
+        if (head == null || head.next == null) {
+            return null;
+        }
+        ListNode p = head;
+        ListNode q = head;
+        while (q != null) {
+            p = p.next;
+            q = q.next;
+            if (q != null) q = q.next;
+            else return null;
+            if (p == q) {
+                break;
             }
         }
-        return null;
+        if (q == null) return null;
+        p = head;
+        while (true) {
+            if (p == q) return p;
+            p = p.next;
+            q = q.next;
+        }
     }
 
     public void solution() {
         ListNode head1 = new ListNode(3);
-//        int[] a = new int[]{2, 4, 6};
-//        ListNode p = head1;
-//        for (int i = 0; i < a.length; i++) {
-//            ListNode node = new ListNode(a[i]);
-//            p.next = node;
-//            p = node;
-//        }
         ListNode head2 = new ListNode(2);
-        head2.next = head1;
-//        int[] b = new int[]{1, 3, 5};
-//        p = head2;
-//        for (int i = 0; i < b.length; i++) {
-//            ListNode node = new ListNode(b[i]);
-//            p.next = node;
-//            p = node;
-//        }
-        ListNode p = getIntersectionNode(head1, head2);
+        head1.next = head2;
+        ListNode p = getIntersectionNode(null, head2);
         if (p != null) System.out.println(p.val);
     }
 

@@ -1,5 +1,16 @@
 /**
- * Created by yao on 2014/11/28.
+ * Created by yaodh on 2014/11/28.
+ * <p/>
+ * LeetCode: Linked List Cycle II
+ * Link: https://oj.leetcode.com/problems/linked-list-cycle-ii/
+ * Description:
+ * -----------------------------
+ * Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
+ * Follow up:
+ * Can you solve it without using extra space?
+ * -----------------------------
+ * <p/>
+ * Tag: LinkedList
  */
 public class LinkedListCycleII {
     private class ListNode {
