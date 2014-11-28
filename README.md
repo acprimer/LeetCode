@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **140 / 156** problems before 2014/11/28.
+I have solved **146 / 156** problems before 2014/11/28.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -127,3 +127,9 @@ I have solved **140 / 156** problems before 2014/11/28.
 | [Longest Common Prefix](https://oj.leetcode.com/problems/longest-common-prefix/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LongestCommonPrefix.java) | `String`|
 | [3Sum](https://oj.leetcode.com/problems/3sum/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ThreeSum.java) | `Sort`|
 | [Letter Combinations of a Phone Number](https://oj.leetcode.com/problems/letter-combinations-of-a-phone-number/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LetterCombinationsOfAPhoneNumber.java) | `Backtracking`|
+| [Remove Nth Node From End of List](https://oj.leetcode.com/problems/remove-nth-node-from-end-of-list/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RemoveNthNodeFromEndOfList.java) | `TwoPointers`|
+| [Implement strStr()](https://oj.leetcode.com/problems/implement-strstr/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ImplementStrStr.java) | `String`|
+| [Remove Element](https://oj.leetcode.com/problems/remove-element/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RemoveElement.java) | `TwoPointers`|
+| [Swap Nodes in Pairs](https://oj.leetcode.com/problems/swap-nodes-in-pairs/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SwapNodesInPairs.java) | `LinkedList`|
+| [Valid Parentheses](https://oj.leetcode.com/problems/valid-parentheses/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ValidParentheses.java) | `Stack`|
+| [Generate Parentheses](https://oj.leetcode.com/problems/generate-parentheses/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/GenerateParentheses.java) | `Backtracking`|
