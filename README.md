@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **146 / 156** problems before 2014/11/28.
+I have solved **147 / 156** problems before 2014/11/28.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -133,3 +133,4 @@ I have solved **146 / 156** problems before 2014/11/28.
 | [Swap Nodes in Pairs](https://oj.leetcode.com/problems/swap-nodes-in-pairs/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SwapNodesInPairs.java) | `LinkedList`|
 | [Valid Parentheses](https://oj.leetcode.com/problems/valid-parentheses/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ValidParentheses.java) | `Stack`|
 | [Generate Parentheses](https://oj.leetcode.com/problems/generate-parentheses/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/GenerateParentheses.java) | `Backtracking`|
+| [Merge k Sorted Lists](https://oj.leetcode.com/problems/merge-k-sorted-lists/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MergeKSortedLists.java) | `Heap`|
