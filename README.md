@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **136 / 160** problems before 2014/11/28.
+I have solved **136 / 156** problems before 2014/11/28.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -120,6 +120,7 @@ I have solved **136 / 160** problems before 2014/11/28.
 | [String to Integer (atoi)](https://oj.leetcode.com/problems/string-to-integer-atoi/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/StringToInteger.java) | `Math`|
 | [Palindrome Number](https://oj.leetcode.com/problems/palindrome-number/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/PalindromeNumber.java) | `Math`|
 | [Container With Most Water](https://oj.leetcode.com/problems/container-with-most-water/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ContainerWithMostWater.java) | `TwoPointers`|
+| [Trapping Rain Water](https://oj.leetcode.com/problems/trapping-rain-water/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/TrappingRainWater.java) | `TwoPointers`|
 | [Linked List Cycle](https://oj.leetcode.com/problems/linked-list-cycle/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LinkedListCycle.java) | `LinkedList`|
 | [Linked List Cycle II](https://oj.leetcode.com/problems/linked-list-cycle-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LinkedListCycleII.java) | `LinkedList`|
 | [Intersection of Two Linked Lists](https://oj.leetcode.com/problems/intersection-of-two-linked-lists/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/IntersectionOfTwoLinkedLists.java) | `LinkedList`|

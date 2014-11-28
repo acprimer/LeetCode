@@ -11,38 +11,34 @@
  * Given [0,1,0,2,1,0,1,3,2,1,2,1], return 6.
  * -----------------------------
  * <p/>
- * Tag: Binary Search
+ * Tag: TwoPointers
  */
 public class TrappingRainWater {
     public int trap(int[] A) {
-        if (A.length <= 1) return 0;
+        if (A.length <= 2) return 0;
         int ans = 0;
-        int p = 1, q = A.length - 2;
-        while (p < A.length && A[p] >= A[p - 1]) {
-            p++;
-        }
-        while (q >= 0 && A[q] >= A[q + 1]) {
-            q--;
-        }
-        p--;
-        q++;
-        int sum = 0;
-        for (int i = p + 1; i < q; i++) {
-            int minHeight = Math.min(A[p], A[q]);
-            if (A[i] <= minHeight) {
-                sum += A[i];
+        int p = 0, q = A.length - 1;
+        int left = 0, right = 0;
+        while (p < q) {
+            if (A[p] < A[q]) {
+                while (p < q && A[p] <= left) {
+                    ans += left - A[p];
+                    p++;
+                }
+                if (p < q) left = A[p];
             } else {
-                ans += (i - p - 1) * Math.min(A[p], A[i]) - sum;
-                sum = 0;
-                p = i;
+                while (p < q && A[q] <= right) {
+                    ans += right - A[q];
+                    q--;
+                }
+                if (p < q) right = A[q];
             }
         }
-        if (q - p > 1) ans += (q - p - 1) * Math.min(A[p], A[q]) - sum;
         return ans;
     }
 
     public static void main(String[] args) {
-        int ans = new TrappingRainWater().trap(new int[]{6,4,2,0,3,2,0,3,1,4,5,3,2,7,5,3,0,1,2,1,3,4,6,8,1,3});
+        int ans = new TrappingRainWater().trap(new int[]{5, 4, 1, 2});
         System.out.println(ans);
     }
 }
