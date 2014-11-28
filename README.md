@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **136 / 156** problems before 2014/11/28.
+I have solved **140 / 156** problems before 2014/11/28.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -124,3 +124,6 @@ I have solved **136 / 156** problems before 2014/11/28.
 | [Linked List Cycle](https://oj.leetcode.com/problems/linked-list-cycle/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LinkedListCycle.java) | `LinkedList`|
 | [Linked List Cycle II](https://oj.leetcode.com/problems/linked-list-cycle-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LinkedListCycleII.java) | `LinkedList`|
 | [Intersection of Two Linked Lists](https://oj.leetcode.com/problems/intersection-of-two-linked-lists/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/IntersectionOfTwoLinkedLists.java) | `LinkedList`|
+| [Longest Common Prefix](https://oj.leetcode.com/problems/longest-common-prefix/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LongestCommonPrefix.java) | `String`|
+| [3Sum](https://oj.leetcode.com/problems/3sum/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ThreeSum.java) | `Sort`|
+| [Letter Combinations of a Phone Number](https://oj.leetcode.com/problems/letter-combinations-of-a-phone-number/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LetterCombinationsOfAPhoneNumber.java) | `Backtracking`|
