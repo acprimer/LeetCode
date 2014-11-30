@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **147 / 156** problems before 2014/11/28.
+I have solved **150 / 160** problems before 2014/11/30.
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -134,3 +134,6 @@ I have solved **147 / 156** problems before 2014/11/28.
 | [Valid Parentheses](https://oj.leetcode.com/problems/valid-parentheses/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ValidParentheses.java) | `Stack`|
 | [Generate Parentheses](https://oj.leetcode.com/problems/generate-parentheses/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/GenerateParentheses.java) | `Backtracking`|
 | [Merge k Sorted Lists](https://oj.leetcode.com/problems/merge-k-sorted-lists/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MergeKSortedLists.java) | `Heap`|
+| [First Missing Positive](https://oj.leetcode.com/problems/first-missing-positive/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/FirstMissingPositive.java) | `Array`|
+| [Integer to Roman](https://oj.leetcode.com/problems/integer-to-roman/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/IntegerToRoman.java) | `Math`|
+| [Roman to Integer](https://oj.leetcode.com/problems/roman-to-integer/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RomanToInteger.java) | `Math`|
