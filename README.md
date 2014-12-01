@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/acprimer/leetcode.png?label=ready&title=Ready)](https://waffle.io/acprimer/leetcode)
 LeetCode
 ========
 
