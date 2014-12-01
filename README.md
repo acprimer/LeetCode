@@ -5,6 +5,12 @@ My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
 I have solved **150 / 160** problems before 2014/11/30.
 
+- [ ] a task list item
+- [ ] list syntax required
+- [ ] normal **formatting**, @mentions, #1234 refs
+- [ ] incomplete
+- [x] completed
+
 | Title | Language | Tag |
 | ------|:--------:|:---:|
 | [Word Break](https://oj.leetcode.com/problems/word-break/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/WordBreak.java) | `DP` |
