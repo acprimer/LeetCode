@@ -5,11 +5,12 @@ My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
 I have solved **150 / 160** problems before 2014/11/30.
 
-- [ ] a task list item
-- [ ] list syntax required
-- [ ] normal **formatting**, @mentions, #1234 refs
-- [ ] incomplete
-- [x] completed
+- [ ] Regular Expression Matching
+- [ ] 3Sum Closest
+- [ ] 4Sum
+- [ ] Substring with Concatenation of All Words
+- [ ] Wildcard Matching
+- [ ] Word Ladder II
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
