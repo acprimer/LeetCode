@@ -4,12 +4,11 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **150 / 160** problems before 2014/11/30.
+I have solved **150 / 160** problems before 2014/12/2.
 
 - [ ] Regular Expression Matching
 - [ ] 3Sum Closest
 - [ ] 4Sum
-- [ ] Substring with Concatenation of All Words
 - [ ] Wildcard Matching
 - [ ] Word Ladder II
 
@@ -145,3 +144,4 @@ I have solved **150 / 160** problems before 2014/11/30.
 | [First Missing Positive](https://oj.leetcode.com/problems/first-missing-positive/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/FirstMissingPositive.java) | `Array`|
 | [Integer to Roman](https://oj.leetcode.com/problems/integer-to-roman/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/IntegerToRoman.java) | `Math`|
 | [Roman to Integer](https://oj.leetcode.com/problems/roman-to-integer/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RomanToInteger.java) | `Math`|
+| [Substring with Concatenation of All Words](https://oj.leetcode.com/problems/substring-with-concatenation-of-all-words/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SubstringWithConcatenationOfAllWords.java) | `Hash`|
