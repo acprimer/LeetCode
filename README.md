@@ -4,13 +4,14 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **150 / 160** problems before 2014/12/2.
+I have solved **153 / 156** problems before 2014/12/2.
 
 - [ ] Regular Expression Matching
 - [ ] 3Sum Closest
 - [ ] 4Sum
 - [ ] Wildcard Matching
 - [ ] Word Ladder II
+- [ ] Implement strStr()
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -132,7 +133,10 @@ I have solved **150 / 160** problems before 2014/12/2.
 | [Linked List Cycle II](https://oj.leetcode.com/problems/linked-list-cycle-ii/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LinkedListCycleII.java) | `LinkedList`|
 | [Intersection of Two Linked Lists](https://oj.leetcode.com/problems/intersection-of-two-linked-lists/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/IntersectionOfTwoLinkedLists.java) | `LinkedList`|
 | [Longest Common Prefix](https://oj.leetcode.com/problems/longest-common-prefix/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LongestCommonPrefix.java) | `String`|
-| [3Sum](https://oj.leetcode.com/problems/3sum/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ThreeSum.java) | `Sort`|
+| [Two Sum](https://oj.leetcode.com/problems/two-sum/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/TwoSum.java) | `TwoPointers`|
+| [3Sum](https://oj.leetcode.com/problems/3sum/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ThreeSum.java) | `Sort` `TwoPointers`|
+| [3Sum Closest](https://oj.leetcode.com/problems/3sum-closest/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ThreeSumClosest.java) | `Sort` `TwoPointers`|
+| [4Sum](https://oj.leetcode.com/problems/4sum/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/FourSum.java) | `Sort` `TwoPointers`|
 | [Letter Combinations of a Phone Number](https://oj.leetcode.com/problems/letter-combinations-of-a-phone-number/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LetterCombinationsOfAPhoneNumber.java) | `Backtracking`|
 | [Remove Nth Node From End of List](https://oj.leetcode.com/problems/remove-nth-node-from-end-of-list/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RemoveNthNodeFromEndOfList.java) | `TwoPointers`|
 | [Implement strStr()](https://oj.leetcode.com/problems/implement-strstr/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ImplementStrStr.java) | `String`|

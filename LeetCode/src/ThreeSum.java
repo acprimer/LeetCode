@@ -20,39 +20,56 @@ import java.util.List;
  * (-1, -1, 2)
  * -----------------------------
  * <p/>
- * Tag: Sort
+ * Tag: Sort TwoPointers
  */
 public class ThreeSum {
-    /*public List<List<Integer>> threeSum(int[] num) {
+    public List<Integer> generate(int x, int y, int z) {
+        List<Integer> list = new ArrayList<Integer>();
+        list.add(x);
+        list.add(y);
+        list.add(z);
+        return list;
+    }
+
+    // O(n^2)
+    public List<List<Integer>> threeSum(int[] num) {
         List<List<Integer>> ans = new ArrayList<List<Integer>>();
         if (num.length < 3) return ans;
         Arrays.sort(num);
-        int i=0, j=num.length-1;
-        while(i<j) {
-            int target = -num[i]-num[j];
-            List<Integer> list = generate(num[i],num[j],target);
-            if(num[i] == 0 && num[j] ==0) {
-                if(j-i>=2) ans.add(list);
-                else break;
+        for (int i = 0; i < num.length; i++) {
+            while (i >= 1 && i < num.length && num[i] == num[i - 1]) i++;
+            if (i >= num.length) break;
+            int target = -num[i];
+            int start = i + 1, end = num.length - 1;
+            while (start < end) {
+                int[] idx = twoSum(num, start, end, target);
+                if (idx[0] == -1) break;
+                ans.add(generate(num[i], num[idx[0]], num[idx[1]]));
+                start = idx[0] + 1;
+                end = idx[1] - 1;
+                while (start < end && num[start] == num[start - 1]) start++;
             }
-            if((target==num[i] && num[i]==num[i+1])
-                    ||(target==num[j] && num[j]==num[j-1])) {
-                ans.add(list);
-            }
-            if(target<num[i]) j--;
-            else if(target>num[j]) i++;
-            else {
-                int idx = Arrays.binarySearch(num, target);
-                if(idx>=0) {
-                    ans.add(list);
-                }
-                i++;
-            }
-
         }
         return ans;
-    }*/
-    public List<Integer> generate(int x, int y, int z) {
+    }
+
+    public int[] twoSum(int[] num, int start, int end, int target) {
+        int[] ans = new int[]{-1, -1};
+        while (start < end) {
+            if (num[start] + num[end] == target) {
+                ans[0] = start;
+                ans[1] = end;
+                return ans;
+            }
+            if (num[start] + num[end] > target) {
+                end--;
+            } else start++;
+        }
+        return ans;
+    }
+
+    // Time: O(n^2*lgn)
+    /*public List<Integer> generate(int x, int y, int z) {
         List<Integer> list = new ArrayList<Integer>();
         list.add(x);
         list.add(y);
@@ -87,10 +104,10 @@ public class ThreeSum {
             i = k - 1;
         }
         return ans;
-    }
+    }*/
 
     public static void main(String[] args) {
-        List<List<Integer>> ans = new ThreeSum().threeSum(new int[]{-1, 0, 1, 0});
+        List<List<Integer>> ans = new ThreeSum().threeSum(new int[]{0, 0, 0});
         for (List<Integer> line : ans) {
             for (int x : line) {
                 System.out.print(x + " ");
