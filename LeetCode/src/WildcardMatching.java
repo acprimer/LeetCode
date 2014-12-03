@@ -1,45 +1,66 @@
 /**
- * Created by yaodh on 2014/11/25.
+ * Created by yaodh on 2014/12/3.
+ * <p/>
+ * LeetCode: Wildcard Matching
+ * Link: https://oj.leetcode.com/problems/wildcard-matching/
+ * Description:
+ * -----------------------------
+ * Implement wildcard pattern matching with support for '?' and '*'.
+ * '?' Matches any single character.
+ * '*' Matches any sequence of characters (including the empty sequence).
+ * The matching should cover the entire input string (not partial).
+ * The function prototype should be:
+ * bool isMatch(const char *s, const char *p)
+ * Some examples:
+ * isMatch("aa","a") → false
+ * isMatch("aa","aa") → true
+ * isMatch("aaa","aa") → false
+ * isMatch("aa", "*") → true
+ * isMatch("aa", "a*") → true
+ * isMatch("ab", "?*") → true
+ * isMatch("aab", "c*a*b") → false
+ * -----------------------------
+ * <p/>
+ * Tag: String
  */
 public class WildcardMatching {
 
     public boolean isMatch(String s, String p) {
-        s = ' ' + s;
-        p = ' ' + p;
-        boolean[][] dp = new boolean[p.length()][s.length()];
-        dp[0][0] = true;
-        int last = 0;
+        int i = 0, j = 0, start = j;
         boolean flag = false;
-        for (int i = 1; i < p.length(); i++) {
-            if (p.charAt(i) != '*') {
-                if(flag) {
-                    int tmp = -1;
-                    for (int j = last + 1; j < s.length(); j++) {
-                        dp[i][j] = dp[i - 1][j - 1] && match(p.charAt(i), s.charAt(j));
-                        if (dp[i][j] && tmp == -1) {
-                            tmp = j;
-                        }
-                    }
-                    if (tmp == -1) return false;
-                    last = tmp;
-                }
-                else{
-                    last++;
-                    if(s.length()<=last) return false;
-                    dp[i][last] = dp[i - 1][last - 1] && match(p.charAt(i), s.charAt(last));
-                    if(dp[i][last]) return false;
-                }
-                flag = false;
-            } else {
+        for (; i < s.length() && j < p.length(); i++) {
+            if (p.charAt(j) == '*') {
+                j++;
+                start = j;
                 flag = true;
+                i--;
+            } else if (match(p.charAt(j), s.charAt(i))) {
+                j++;
+            } else {
+                if (start == 0) return false;
+                i -= j - start;
+                j = start;
             }
         }
-        return dp[p.length() - 1][s.length() - 1];
+        for (; j < p.length(); j++) {
+            if (p.charAt(j) != '*') return false;
+            else flag = true;
+        }
+        if (!flag) return i >= s.length();
+        for (i = 0; ; i++) {
+            if (p.charAt(p.length() - 1 - i) == '*') return true;
+            if (!match(p.charAt(p.length() - 1 - i), s.charAt(s.length() - 1 - i))) return false;
+        }
     }
 
     public boolean match(char a, char b) {
         if (a == '?' || a == b) return true;
         return false;
+    }
+
+    public static void main(String[] args) {
+        boolean ans = new WildcardMatching().isMatch("aac", "*ac");
+        System.out.println(ans);
     }
 
     // TLE
@@ -58,9 +79,4 @@ public class WildcardMatching {
         }
         return false;
     }*/
-
-    public static void main(String[] args) {
-        boolean ans = new WildcardMatching().isMatch("a", "aa");
-        System.out.println(ans);
-    }
 }
