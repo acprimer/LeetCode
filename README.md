@@ -4,11 +4,8 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **153 / 156** problems before 2014/12/2.
+I have solved **154 / 156** problems before 2014/12/3.
 
-- [ ] Regular Expression Matching
-- [ ] 3Sum Closest
-- [ ] 4Sum
 - [ ] Wildcard Matching
 - [ ] Word Ladder II
 - [ ] Implement strStr()
@@ -149,3 +146,4 @@ I have solved **153 / 156** problems before 2014/12/2.
 | [Integer to Roman](https://oj.leetcode.com/problems/integer-to-roman/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/IntegerToRoman.java) | `Math`|
 | [Roman to Integer](https://oj.leetcode.com/problems/roman-to-integer/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RomanToInteger.java) | `Math`|
 | [Substring with Concatenation of All Words](https://oj.leetcode.com/problems/substring-with-concatenation-of-all-words/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SubstringWithConcatenationOfAllWords.java) | `Hash`|
+| [Regular Expression Matching](https://oj.leetcode.com/problems/regular-expression-matching/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RegularExpressionMatching.java) | `Backtracking`|
