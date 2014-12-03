@@ -1,32 +1,40 @@
 import java.util.*;
 
 /**
-* Created by yaodh on 2014/11/14.
-*
-* LeetCode: Word Ladder
-* Link: https://oj.leetcode.com/problems/word-ladder/
-* Description:
-* -----------------------------
-* Given two words (start and end), and a dictionary, find the length of shortest transformation sequence from start to end, such that:
-* ---Only one letter can be changed at a time
-* ---Each intermediate word must exist in the dictionary
-* For example,
-* Given:
-* start = "hit"
-* end = "cog"
-* dict = ["hot","dot","dog","lot","log"]
-* As one shortest transformation is "hit" -> "hot" -> "dot" -> "dog" -> "cog",
-* return its length 5.
-* -----------------------------
-*
-* Tag: BFS
-*/
+ * Created by yaodh on 2014/11/14.
+ * <p/>
+ * LeetCode: Word Ladder II
+ * Link: https://oj.leetcode.com/problems/word-ladder-ii/
+ * Description:
+ * -----------------------------
+ * Given two words (start and end), and a dictionary,
+ * find all shortest transformation sequence(s) from start to end, such that:
+ * Only one letter can be changed at a time
+ * Each intermediate word must exist in the dictionary
+ * For example,
+ * Given:
+ * start = "hit"
+ * end = "cog"
+ * dict = ["hot","dot","dog","lot","log"]
+ * Return
+ * [
+ * ["hit","hot","dot","dog","cog"],
+ * ["hit","hot","lot","log","cog"]
+ * ]
+ * Note:
+ * All words have the same length.
+ * All words contain only lowercase alphabetic characters.
+ * -----------------------------
+ * <p/>
+ * Tag: BFS
+ */
 
 public class WordLadderII {
-    class Node{
+    class Node {
         int pre;
         String label;
         int cost;
+
         public Node(String label, int cost, int pre) {
             this.label = label;
             this.cost = cost;
@@ -39,6 +47,7 @@ public class WordLadderII {
     private List<List<String>> ans = new ArrayList<List<String>>();
     private Set<String> hash1 = new HashSet<String>();
     private Set<String> hash2 = new HashSet<String>();
+
     public List<List<String>> findLadders(String start, String end, Set<String> dict) {
         arc = new String[dict.size()];
         generateHash(end, dict);
@@ -48,24 +57,24 @@ public class WordLadderII {
         int queuePointer = 0;
         queueBackup.add(new Node(start, 1, -1));
         int minLen = Integer.MAX_VALUE;
-        while(queuePointer < queueBackup.size()) {
+        while (queuePointer < queueBackup.size()) {
             Node node = queueBackup.get(queuePointer++);
             int pre = queuePointer - 1;
             String label = node.label;
             int cost = node.cost;
-            if(cost > minLen) break;
+            if (cost > minLen) break;
             vis.add(label);
-            if(label.equals(end)) {
+            if (label.equals(end)) {
                 minLen = cost;
                 constructWordLadder(pre, queueBackup);
             }
-            if(cost == minLen) continue;
-            if(cost == minLen-1 && !hash1.contains(label)) continue;
-            if(cost == minLen-2 && !hash2.contains(label)) continue;
+            if (cost == minLen) continue;
+            if (cost == minLen - 1 && !hash1.contains(label)) continue;
+            if (cost == minLen - 2 && !hash2.contains(label)) continue;
             getArc(label, dict);
-            for(int j=0;j<arcCnt;j++) {
-                if(!arc[j].equals(end) && vis.contains(arc[j])) continue;
-                queueBackup.add(new Node(arc[j], cost+1, pre));
+            for (int j = 0; j < arcCnt; j++) {
+                if (!arc[j].equals(end) && vis.contains(arc[j])) continue;
+                queueBackup.add(new Node(arc[j], cost + 1, pre));
             }
         }
         return ans;
@@ -74,13 +83,13 @@ public class WordLadderII {
     private void generateHash(String end, Set<String> dict) {
         getArc(end, dict);
         String[] tmp = new String[arcCnt];
-        for(int j=0;j<tmp.length;j++) {
+        for (int j = 0; j < tmp.length; j++) {
             tmp[j] = arc[j];
         }
-        for(int j=0;j<tmp.length;j++) {
+        for (int j = 0; j < tmp.length; j++) {
             hash1.add(tmp[j]);
             getArc(tmp[j], dict);
-            for(int k=0;k<arcCnt;k++) {
+            for (int k = 0; k < arcCnt; k++) {
                 hash2.add(arc[k]);
             }
         }
@@ -88,7 +97,7 @@ public class WordLadderII {
 
     private void constructWordLadder(int pre, List<Node> queue) {
         List<String> list = new LinkedList<String>();
-        while(pre != -1) {
+        while (pre != -1) {
             Node node = queue.get(pre);
             list.add(0, node.label);
             pre = node.pre;
@@ -100,12 +109,12 @@ public class WordLadderII {
         arcCnt = 0;
         char[] word = new char[start.length()];
         start.getChars(0, start.length(), word, 0);
-        for(int i=0;i<start.length();i++) {
-            for(char ch = 'a'; ch <= 'z'; ch++) {
-                if(ch == start.charAt(i)) continue;
+        for (int i = 0; i < start.length(); i++) {
+            for (char ch = 'a'; ch <= 'z'; ch++) {
+                if (ch == start.charAt(i)) continue;
                 word[i] = ch;
                 String str = new String(word);
-                if(set.contains(str)) {
+                if (set.contains(str)) {
                     arc[arcCnt++] = str;
                 }
             }
@@ -121,8 +130,8 @@ public class WordLadderII {
         set.add("lot");
         set.add("log");
         List<List<String>> ans = new WordLadderII().findLadders("hit", "cog", set);
-        for(List<String> list : ans) {
-            for(String str : list) {
+        for (List<String> list : ans) {
+            for (String str : list) {
                 System.out.print(str + "-->");
             }
             System.out.println();

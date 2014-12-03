@@ -24,33 +24,44 @@
  * Tag: String
  */
 public class WildcardMatching {
-
     public boolean isMatch(String s, String p) {
-        int i = 0, j = 0, start = j;
-        boolean flag = false;
-        for (; i < s.length() && j < p.length(); i++) {
-            if (p.charAt(j) == '*') {
-                j++;
-                start = j;
-                flag = true;
+        int i=0,j=0;
+        // i: find the first index of *
+        while(i<p.length() && p.charAt(i)!='*') {
+            if(i>=s.length() || !match(p.charAt(i),s.charAt(i))) return false;
+            i++;
+        }
+        if(i>=p.length()) return i>=s.length();
+        // j: find the last index of *
+        while(j<p.length()) {
+            int pid = p.length()-1-j;
+            int sid = s.length()-1-j;
+            if(p.charAt(pid)=='*') break;
+            if(sid<0 || !match(p.charAt(pid),s.charAt(sid))) return false;
+            j++;
+        }
+        if(i+j>s.length()) return false;
+        return search(s.substring(i,s.length()-j),p.substring(i,p.length()-j));
+    }
+
+    // search p in s
+    public boolean search(String s, String p) {
+        int i,j,start=0;
+        for(i=0,j=0;i<s.length()&&j<p.length();i++) {
+            if(p.charAt(j)=='*') {
+                start = ++j;
                 i--;
-            } else if (match(p.charAt(j), s.charAt(i))) {
+            } else if(match(p.charAt(j),s.charAt(i))) {
                 j++;
             } else {
-                if (start == 0) return false;
-                i -= j - start;
-                j = start;
+                i-=j-start;
+                j=start;
             }
         }
-        for (; j < p.length(); j++) {
-            if (p.charAt(j) != '*') return false;
-            else flag = true;
+        while(j<p.length() && p.charAt(j)=='*') {
+            j++;
         }
-        if (!flag) return i >= s.length();
-        for (i = 0; ; i++) {
-            if (p.charAt(p.length() - 1 - i) == '*') return true;
-            if (!match(p.charAt(p.length() - 1 - i), s.charAt(s.length() - 1 - i))) return false;
-        }
+        return j>=p.length();
     }
 
     public boolean match(char a, char b) {
@@ -59,7 +70,7 @@ public class WildcardMatching {
     }
 
     public static void main(String[] args) {
-        boolean ans = new WildcardMatching().isMatch("aac", "*ac");
+        boolean ans = new WildcardMatching().isMatch("b", "?*?");
         System.out.println(ans);
     }
 
