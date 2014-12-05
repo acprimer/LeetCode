@@ -1,10 +1,9 @@
-[![Stories in Ready](https://badge.waffle.io/acprimer/leetcode.png?label=ready&title=Ready)](https://waffle.io/acprimer/leetcode)
 LeetCode
 ========
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **155 / 156** problems before 2014/12/3.
+I have solved **156 / 157** problems before 2014/12/5.
 
 - [ ] Word Ladder II
 - [ ] Implement strStr()
@@ -147,3 +146,4 @@ I have solved **155 / 156** problems before 2014/12/3.
 | [Substring with Concatenation of All Words](https://oj.leetcode.com/problems/substring-with-concatenation-of-all-words/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/SubstringWithConcatenationOfAllWords.java) | `Hash`|
 | [Regular Expression Matching](https://oj.leetcode.com/problems/regular-expression-matching/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RegularExpressionMatching.java) | `Backtracking`|
 | [Wildcard Matching](https://oj.leetcode.com/problems/wildcard-matching/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/WildcardMatching.java) | `String`|
+| [Find Peak Element](https://oj.leetcode.com/problems/find-peak-element/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/FindPeakElement.java) | `Array`|
