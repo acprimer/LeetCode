@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **156 / 157** problems before 2014/12/5.
+I have solved **157 / 158** problems before 2014/12/5.
 
 - [ ] Word Ladder II
 - [ ] Implement strStr()
@@ -147,3 +147,4 @@ I have solved **156 / 157** problems before 2014/12/5.
 | [Regular Expression Matching](https://oj.leetcode.com/problems/regular-expression-matching/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RegularExpressionMatching.java) | `Backtracking`|
 | [Wildcard Matching](https://oj.leetcode.com/problems/wildcard-matching/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/WildcardMatching.java) | `String`|
 | [Find Peak Element](https://oj.leetcode.com/problems/find-peak-element/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/FindPeakElement.java) | `Array`|
+| [Maximum Gap](https://oj.leetcode.com/problems/maximum-gap/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MaximumGap.java) | `Sort`|
