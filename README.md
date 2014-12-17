@@ -149,3 +149,4 @@ I have solved **158 / 160** problems before 2014/12/5.
 | [Find Peak Element](https://oj.leetcode.com/problems/find-peak-element/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/FindPeakElement.java) | `Array`|
 | [Maximum Gap](https://oj.leetcode.com/problems/maximum-gap/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MaximumGap.java) | `Sort`|
 | [Compare Version Numbers](https://oj.leetcode.com/problems/compare-version-numbers/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/CompareVersionNumbers.java) | `String`|
+| [Fraction to Recurring Decimal](https://oj.leetcode.com/problems/fraction-to-recurring-decimal/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/FractionToRecurringDecimal.java) | `Hash`|
