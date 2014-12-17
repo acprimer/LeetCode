@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **158 / 160** problems before 2014/12/5.
+I have solved **159 / 160** problems before 2014/12/5.
 
 - [ ] Word Ladder II
 - [ ] Implement strStr()
