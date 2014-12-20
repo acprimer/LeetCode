@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **159 / 160** problems before 2014/12/17.
+I have solved **160 / 161** problems before 2014/12/20.
 
 - [ ] Word Ladder II
 - [ ] Implement strStr()
@@ -150,3 +150,4 @@ I have solved **159 / 160** problems before 2014/12/17.
 | [Maximum Gap](https://oj.leetcode.com/problems/maximum-gap/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MaximumGap.java) | `Sort`|
 | [Compare Version Numbers](https://oj.leetcode.com/problems/compare-version-numbers/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/CompareVersionNumbers.java) | `String`|
 | [Fraction to Recurring Decimal](https://oj.leetcode.com/problems/fraction-to-recurring-decimal/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/FractionToRecurringDecimal.java) | `Hash`|
+| [Excel Sheet Column Title](https://oj.leetcode.com/problems/excel-sheet-column-title/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ExcelSheetColumnTitle.java) | `Math`|
