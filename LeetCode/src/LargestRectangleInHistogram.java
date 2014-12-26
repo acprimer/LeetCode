@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 /**
  * Created by yaodh on 2014/11/22.
  * <p/>
@@ -15,8 +17,34 @@
  * Tag: Stack
  */
 public class LargestRectangleInHistogram {
-    // record the count of heights form index of the minimum height to current index
+
     public int largestRectangleArea(int[] height) {
+        int ans = 0;
+        Stack<Integer> stack = new Stack<Integer>();
+        for (int i = 0; i <= height.length; i++) {
+            int curHeight = 0;
+            if (i < height.length) {
+                curHeight = height[i];
+            }
+            if (stack.isEmpty() || curHeight > height[stack.peek()]) {
+                stack.push(i);
+                continue;
+            }
+            if (curHeight < height[stack.peek()]) {
+                int lastIndex = i;
+                while (!stack.isEmpty() && curHeight < height[stack.peek()]) {
+                    ans = Math.max(ans, height[stack.peek()] * (i - stack.peek()));
+                    lastIndex = stack.pop();
+                }
+                height[lastIndex] = curHeight;
+                stack.push(lastIndex);
+            }
+        }
+        return ans;
+    }
+
+    // record the count of heights form index of the minimum height to current index
+    /*public int largestRectangleArea(int[] height) {
         if (height == null || height.length <= 0) return 0;
         int size = height.length;
         int[] minHeigh = new int[size];
@@ -47,7 +75,7 @@ public class LargestRectangleInHistogram {
             }
         }
         return ans;
-    }
+    }*/
 
     public static void main(String[] args) {
         int ans = new LargestRectangleInHistogram().largestRectangleArea(new int[]{1, 1});
