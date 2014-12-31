@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **162 / 163** problems before 2014/12/20.
+I have solved **163 / 164** problems before 2014/12/20.
 
 - [ ] Word Ladder II
 - [ ] Implement strStr()
@@ -153,3 +153,4 @@ I have solved **162 / 163** problems before 2014/12/20.
 | [Excel Sheet Column Title](https://oj.leetcode.com/problems/excel-sheet-column-title/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ExcelSheetColumnTitle.java) | `Math`|
 | [Majority Element](https://oj.leetcode.com/problems/majority-element/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MajorityElement.java) | `Array`|
 | [Excel Sheet Column Number](https://oj.leetcode.com/problems/excel-sheet-column-number/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ExcelSheetColumnNumber.java) | `Array`|
+| [Factorial Trailing Zeroes](https://oj.leetcode.com/problems/factorial-trailing-zeroes/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/FactorialTrailingZeroes.java) | `Math`|
