@@ -154,3 +154,4 @@ I have solved **163 / 164** problems before 2014/12/20.
 | [Majority Element](https://oj.leetcode.com/problems/majority-element/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MajorityElement.java) | `Array`|
 | [Excel Sheet Column Number](https://oj.leetcode.com/problems/excel-sheet-column-number/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ExcelSheetColumnNumber.java) | `Array`|
 | [Factorial Trailing Zeroes](https://oj.leetcode.com/problems/factorial-trailing-zeroes/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/FactorialTrailingZeroes.java) | `Math`|
+| [Maximum Product Subarray](https://oj.leetcode.com/problems/maximum-product-subarray/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MaximumProductSubarray.java) | `DP`|
