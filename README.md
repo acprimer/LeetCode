@@ -3,10 +3,12 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **163 / 164** problems before 2014/12/20.
+I have solved **164 / 167** problems before 2015/1/14.
 
 - [ ] Word Ladder II
 - [ ] Implement strStr()
+- [ ] Binary Search Tree Iterator
+- [ ] Dungeon Game
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|
@@ -155,3 +157,4 @@ I have solved **163 / 164** problems before 2014/12/20.
 | [Excel Sheet Column Number](https://oj.leetcode.com/problems/excel-sheet-column-number/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ExcelSheetColumnNumber.java) | `Array`|
 | [Factorial Trailing Zeroes](https://oj.leetcode.com/problems/factorial-trailing-zeroes/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/FactorialTrailingZeroes.java) | `Math`|
 | [Maximum Product Subarray](https://oj.leetcode.com/problems/maximum-product-subarray/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MaximumProductSubarray.java) | `DP`|
+| [Largest Number](https://oj.leetcode.com/problems/largest-number/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LargestNumber.java) | `Sort`|
