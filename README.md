@@ -158,3 +158,4 @@ I have solved **164 / 167** problems before 2015/1/14.
 | [Factorial Trailing Zeroes](https://oj.leetcode.com/problems/factorial-trailing-zeroes/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/FactorialTrailingZeroes.java) | `Math`|
 | [Maximum Product Subarray](https://oj.leetcode.com/problems/maximum-product-subarray/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MaximumProductSubarray.java) | `DP`|
 | [Largest Number](https://oj.leetcode.com/problems/largest-number/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LargestNumber.java) | `Sort`|
+| [Reorder List](https://oj.leetcode.com/problems/reorder-list/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ReorderList.java) | `LinkedList`|
