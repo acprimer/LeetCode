@@ -14,25 +14,38 @@
  * Tag: Array
  */
 public class RotateImage {
+//    public void rotate2(int[][] matrix) {
+//        int row = matrix.length;
+//        for (int i = 0; i < row / 2; i++) {
+//            for (int j = i; j < row - 1 - i; j++) {
+//                int tmp = matrix[i][j];
+//                int x = i, y = j;
+//                for (int k = 0; k < 3; k++) {
+//                    int tx = row - 1 - y, ty = x;
+//                    matrix[x][y] = matrix[tx][ty];
+//                    x = tx;
+//                    y = ty;
+//                }
+//                matrix[x][y] = tmp;
+//            }
+//        }
+//    }
+
     public void rotate(int[][] matrix) {
         int row = matrix.length;
         for (int i = 0; i < row / 2; i++) {
             for (int j = i; j < row - 1 - i; j++) {
                 int tmp = matrix[i][j];
-                int x = i, y = j;
-                for (int k = 0; k < 3; k++) {
-                    int tx = row - 1 - y, ty = x;
-                    matrix[x][y] = matrix[tx][ty];
-                    x = tx;
-                    y = ty;
-                }
-                matrix[x][y] = tmp;
+                matrix[i][j] = matrix[row - j - 1][i];
+                matrix[row - j - 1][i] = matrix[row - i - 1][row - j - 1];
+                matrix[row - i - 1][row - j - 1] = matrix[j][row - i - 1];
+                matrix[j][row - i - 1] = tmp;
             }
         }
     }
 
     public static void main(String[] args) {
-        int[][] matrix = new int[][]{{1, 2}, {3, 4}};
+        int[][] matrix = new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         new RotateImage().rotate(matrix);
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
