@@ -3,11 +3,10 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **164 / 167** problems before 2015/1/14.
+I have solved **164 / 167** problems before 2015/4/17.
 
 - [ ] Word Ladder II
 - [ ] Implement strStr()
-- [ ] Binary Search Tree Iterator
 - [ ] Dungeon Game
 
 | Title | Language | Tag |
@@ -159,3 +158,11 @@ I have solved **164 / 167** problems before 2015/1/14.
 | [Maximum Product Subarray](https://oj.leetcode.com/problems/maximum-product-subarray/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/MaximumProductSubarray.java) | `DP`|
 | [Largest Number](https://oj.leetcode.com/problems/largest-number/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LargestNumber.java) | `Sort`|
 | [Reorder List](https://oj.leetcode.com/problems/reorder-list/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ReorderList.java) | `LinkedList`|
+| [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/BinarySearchTreeIterator.java) | `Stack`|
+| [Rotate Array](https://leetcode.com/problems/rotate-array/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RotateArray.java) | `Array`|
+| [Reverse Bits](https://leetcode.com/problems/reverse-bits/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/ReverseBits.java) | `Bit`|
+| [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/NumberOf_1_Bits.java) | `Bit`|
+| [House Robber](https://leetcode.com/problems/house-robber/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/HouseRobber.java) | `DP`|
+| [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/BinaryTreeRightSideView.java) | `Queue`|
+| [Number of Islands](https://leetcode.com/problems/number-of-islands/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/NumberOfIslands.java) | `DFS`|
+| [Bitwise AND of Numbers Range](https://leetcode.com/problems/bitwise-and-of-numbers-range/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/BitwiseANDofNumbersRange.java) | `Bit`|
