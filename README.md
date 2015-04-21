@@ -3,11 +3,12 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **164 / 167** problems before 2015/4/17.
+I have solved **172 / 185** problems before 2015/4/17.
 
 - [ ] Word Ladder II
 - [ ] Implement strStr()
 - [ ] Dungeon Game
+- [ ] Best Time to Buy and Sell Stock IV
 
 | Title | Language | Tag |
 | ------|:--------:|:---:|

@@ -22,44 +22,68 @@ public class BalancedBinaryTree {
             val = x;
         }
     }
-    int leftHeight, rightHeight;
-    boolean ans = true;
-    public boolean isBalanced(TreeNode root) {
-        if(root == null) return true;
-        dfs(root);
-        if(Math.abs(leftHeight-rightHeight) > 1) {
-            ans = false;
-        }
-        return ans;
-    }
+//    int leftHeight, rightHeight;
+//    boolean ans = true;
+//    public boolean isBalanced(TreeNode root) {
+//        if(root == null) return true;
+//        dfs(root);
+//        if(Math.abs(leftHeight-rightHeight) > 1) {
+//            ans = false;
+//        }
+//        return ans;
+//    }
+//
+//    private void dfs(TreeNode root) {
+//        if(root.left == null && root.right == null) {
+//            leftHeight = rightHeight = 1;
+//            return;
+//        }
+//        int leftLeftHeight = 0, leftRightHeight = 0;
+//        if(root.left != null) {
+//            dfs(root.left);
+//            if(Math.abs(leftHeight-rightHeight) > 1) {
+//                ans = false;
+//                return;
+//            }
+//            leftLeftHeight = leftHeight;
+//            leftRightHeight = rightHeight;
+//        }
+//        int rightLeftHeight = 0, rightRightHeight = 0;
+//        if(root.right != null) {
+//            dfs(root.right);
+//            if(Math.abs(leftHeight-rightHeight) > 1) {
+//                ans = false;
+//                return;
+//            }
+//            rightLeftHeight = leftHeight;
+//            rightRightHeight = rightHeight;
+//        }
+//        leftHeight = Math.max(leftLeftHeight, leftRightHeight) + 1;
+//        rightHeight = Math.max(rightLeftHeight, rightRightHeight) + 1;
+//    }
 
-    private void dfs(TreeNode root) {
-        if(root.left == null && root.right == null) {
-            leftHeight = rightHeight = 1;
-            return;
+    int height;
+    public boolean isBalanced(TreeNode root) {
+        if(root == null) {
+            height = 0;
+            return true;
         }
-        int leftLeftHeight = 0, leftRightHeight = 0;
-        if(root.left != null) {
-            dfs(root.left);
-            if(Math.abs(leftHeight-rightHeight) > 1) {
-                ans = false;
-                return;
-            }
-            leftLeftHeight = leftHeight;
-            leftRightHeight = rightHeight;
+        int left, right;
+        if(isBalanced(root.left)) {
+            left = height;
+        } else {
+            return false;
         }
-        int rightLeftHeight = 0, rightRightHeight = 0;
-        if(root.right != null) {
-            dfs(root.right);
-            if(Math.abs(leftHeight-rightHeight) > 1) {
-                ans = false;
-                return;
-            }
-            rightLeftHeight = leftHeight;
-            rightRightHeight = rightHeight;
+        if(isBalanced(root.right)) {
+            right = height;
+        } else {
+            return false;
         }
-        leftHeight = Math.max(leftLeftHeight, leftRightHeight) + 1;
-        rightHeight = Math.max(rightLeftHeight, rightRightHeight) + 1;
+        if(Math.abs(left-right) > 1) {
+            return false;
+        }
+        height = Math.max(left, right) + 1;
+        return true;
     }
 
     public TreeNode generateTree() {
