@@ -169,3 +169,4 @@ I have solved **174 / 187** problems before 2015/4/23.
 | [Bitwise AND of Numbers Range](https://leetcode.com/problems/bitwise-and-of-numbers-range/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/BitwiseANDofNumbersRange.java) | `Bit`|
 | [Happy Number](https://leetcode.com/problems/happy-number/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/HappyNumber.java) | `Hash`|
 | [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RemoveLinkedListElements.java) | `LinkedList`|
+| [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/LongestSubstringWithoutRepeatingCharacters.java) | `Hash` `Two Pointers`|
