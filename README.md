@@ -3,7 +3,7 @@ LeetCode
 
 My solutions to [LeetCode Online Judge](https://oj.leetcode.com/).
 
-I have solved **173 / 186** problems before 2015/4/22.
+I have solved **174 / 187** problems before 2015/4/23.
 
 - [ ] Word Ladder II
 - [ ] Implement strStr()
@@ -168,3 +168,4 @@ I have solved **173 / 186** problems before 2015/4/22.
 | [Number of Islands](https://leetcode.com/problems/number-of-islands/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/NumberOfIslands.java) | `DFS`|
 | [Bitwise AND of Numbers Range](https://leetcode.com/problems/bitwise-and-of-numbers-range/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/BitwiseANDofNumbersRange.java) | `Bit`|
 | [Happy Number](https://leetcode.com/problems/happy-number/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/HappyNumber.java) | `Hash`|
+| [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)  | [Java](https://github.com/acprimer/LeetCode/blob/master/LeetCode/src/RemoveLinkedListElements.java) | `LinkedList`|
