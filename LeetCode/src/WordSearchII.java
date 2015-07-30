@@ -43,7 +43,7 @@ public class WordSearchII {
         }
         Trie trie = new Trie();
         for (int i = 0; i < words.length; i++) {
-            if(words.length > board.length * board[0].length) {
+            if(words[i].length() > board.length * board[0].length) {
                 continue;
             }
             trie.insert(words[i]);
@@ -59,28 +59,28 @@ public class WordSearchII {
                 }
             }
         }
-        Iterator<String> it = set.iterator();
-        while(it.hasNext()) {
-            ans.add(it.next());
+        for (String word : set) {
+            ans.add(word);
         }
         return ans;
     }
 
     private void dfs(int x, int y, char[][] board, TrieNode root, String word, Set<String> set) {
-        if(root.isEndOfWord) {
-            set.add(word);
+        if(x < 0 || x >= board.length || y < 0 || y >= board[0].length || vis[x][y]) {
+            return;
         }
         char ch = board[x][y];
         if(root.child[ch - 'a'] == null) {
             return ;
         }
-        int[][] dir = new int[][]{{-1, 0, 1, 0}, {0, 1, 0, -1}};
-        for (int i = 0; i < 4; i++) {
-            int tx = x + dir[0][i];
-            int ty = y + dir[1][i];
-            if(inTheBoard(tx, ty, board.length, board[0].length) && !vis[tx][ty]) {
-                dfs(tx, ty, board, root.child[ch - 'a'], word + ch, set);
-            }
+        vis[x][y] = true;
+        dfs(x + 1, y, board, root.child[ch - 'a'], word + ch, set);
+        dfs(x, y + 1, board, root.child[ch - 'a'], word + ch, set);
+        dfs(x - 1, y, board, root.child[ch - 'a'], word + ch, set);
+        dfs(x, y - 1, board, root.child[ch - 'a'], word + ch, set);
+        vis[x][y] = false;
+        if(root.child[ch - 'a'].isEndOfWord) {
+            set.add(word + ch);
         }
     }
 
@@ -89,12 +89,12 @@ public class WordSearchII {
     }
 
     public static void main(String[] args) {
-        String[] words = new String[]{"aaaa", "aaaa", "aaaa", "aaaa"};
+        String[] words = new String[]{"a"};
         char[][] boards = new char[words.length][words[0].length()];
         for (int i = 0; i < words.length; i++) {
             boards[i] = words[i].toCharArray();
         }
-        List<String> ans = new WordSearchII().findWords(boards, new String[]{"aaaaaaaaaaaa","aaaaaaaaaaaaa","aaaaaaaaaaab"});
+        List<String> ans = new WordSearchII().findWords(boards, new String[]{"a", "a"});
         for(String word : ans) {
             System.out.println(word);
         }
