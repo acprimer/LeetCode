@@ -16,11 +16,12 @@ public class RepeatedDNASequences {
         Set<String> set = new HashSet<String>();
         for(int i =0;i<len-10;i++) {
             String target = s.substring(i, i+10);
-            if(set.contains(target)) {
-                ans.add(target);
-            } else {
-
+            if(!set.contains(target) && s.lastIndexOf(target) != i) {
+                set.add(target);
             }
+        }
+        for(String str : set) {
+            ans.add(str);
         }
         return ans;
     }
