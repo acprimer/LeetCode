@@ -33,6 +33,7 @@ public class FirstMissingPositive {
         a[x] = a[y];
         a[y] = tmp;
     }
+
     // space: O(n)
     /*public int firstMissingPositive(int[] A) {
         int[] map = new int[A.length + 1];
@@ -48,7 +49,7 @@ public class FirstMissingPositive {
     }*/
 
     public static void main(String[] args) {
-        int ans = new FirstMissingPositive().firstMissingPositive(new int[]{1,1});
+        int ans = new FirstMissingPositive().firstMissingPositive(new int[]{1, 1});
         System.out.println(ans);
     }
 }

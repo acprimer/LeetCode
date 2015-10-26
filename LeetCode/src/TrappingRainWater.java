@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 /**
  * Created by yaodh on 2014/11/25.
  * <p/>
@@ -37,7 +39,7 @@ public class TrappingRainWater {
 //        return ans;
 //    }
 
-    public int trap(int[] A) {
+    /*public int trap(int[] A) {
         if (A.length <= 0) {
             return 0;
         }
@@ -63,10 +65,30 @@ public class TrappingRainWater {
             }
         }
         return water;
+    }*/
+
+    public int trap(int[] A) {
+        if(A == null || A.length <= 0) {
+            return 0;
+        }
+        int ans = 0;
+        Stack<Integer> stack = new Stack<Integer>();
+        for(int i=0;i<A.length;i++) {
+            while (!stack.isEmpty() && A[i] > A[stack.peek()]) {
+                int low = A[stack.pop()];
+                if(stack.isEmpty()) {
+                    break;
+                }
+                int high = Math.min(A[stack.peek()], A[i]);
+                ans += (high - low) * (i - stack.peek() - 1);
+            }
+            stack.push(i);
+        }
+        return ans;
     }
 
     public static void main(String[] args) {
-        int ans = new TrappingRainWater().trap(new int[]{5, 4, 1, 2});
+        int ans = new TrappingRainWater().trap(new int[]{6,4,2,0,3,2,0,3,1,4,5,3,2,7,5,3,0,1,2,1,3,4,6,8,1,3});
         System.out.println(ans);
     }
 }

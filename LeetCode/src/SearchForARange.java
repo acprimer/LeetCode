@@ -17,7 +17,7 @@
  */
 public class SearchForARange {
     // Accepted
-    public int[] searchRange(int[] A, int target) {
+    /*public int[] searchRange(int[] A, int target) {
         int start = -1, end = -1;
         int left = 0, right = A.length - 1;
         while(left <= right) {
@@ -55,10 +55,60 @@ public class SearchForARange {
             }
         }
         return new int[]{start, end};
+    }*/
+    public int[] searchRange(int[] nums, int target) {
+        int start = findLowestIndex(nums, target);
+        int end = findHighestIndex(nums, target);
+        return new int[]{start, end};
+    }
+    public int findLowestIndex(int[] nums, int target) {
+        if(nums == null || nums.length <= 0) {
+            return -1;
+        }
+        if(nums[0] == target) return 0;
+        int low = 0, high = nums.length - 1;
+        while(low <= high) {
+            int mid = (low + high) >>> 1;
+            if(nums[mid] == target) {
+                if(nums[mid-1] == target) {
+                    high = mid - 1;
+                } else {
+                    return mid;
+                }
+            } else if(nums[mid] < target) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return -1;
+    }
+    public int findHighestIndex(int[] nums, int target) {
+        if(nums == null || nums.length <= 0) {
+            return -1;
+        }
+        if(nums[nums.length - 1] == target) return nums.length - 1;
+        int low = 0, high = nums.length - 1;
+        while(low <= high) {
+            int mid = (low + high) >>> 1;
+            if(nums[mid] == target) {
+                if(nums[mid+1] == target) {
+                    low = mid + 1;
+                } else {
+                    return mid;
+                }
+            } else if(nums[mid] < target) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return -1;
     }
 
     public static void main(String[] args) {
-        int[] ans = new SearchForARange().searchRange(new int[]{5, 7, 7, 8, 8, 10}, 8);
+//        int[] ans = new SearchForARange().searchRange(new int[]{5, 7, 7, 8, 8, 10}, 8);
+        int[] ans = new SearchForARange().searchRange(new int[]{1}, 0);
         System.out.print(ans[0] + "," + ans[1]);
     }
 }
