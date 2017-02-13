@@ -14,16 +14,27 @@
  * Tag: Math
  */
 public class ReverseInteger {
+//    public int reverse(int x) {
+//        int ans = 0;
+//        while (x != 0) {
+//            // in case of overflow
+//            // we do not handle this case: Math.abs(ans) == Integer.MAX_VALUE / 10
+//            // because we can't get 2147483648 or 2147483649
+//            if (Math.abs(ans) > Integer.MAX_VALUE / 10) {
+//                return 0;
+//            }
+//            ans = ans * 10 + x % 10;
+//            x /= 10;
+//        }
+//        return ans;
+//    }
+
     public int reverse(int x) {
         int ans = 0;
-        while (x != 0) {
-            // in case of overflow
-            // we do not handle this case: Math.abs(ans) == Integer.MAX_VALUE / 10
-            // because we can't get 2147483648 or 2147483649
-            if (Math.abs(ans) > Integer.MAX_VALUE / 10) {
-                return 0;
-            }
+        while(x != 0) {
+            int num = ans;
             ans = ans * 10 + x % 10;
+            if(ans < num) return 0;
             x /= 10;
         }
         return ans;
@@ -31,6 +42,11 @@ public class ReverseInteger {
 
     public static void main(String[] args) {
         int ans = new ReverseInteger().reverse(-9);
-        System.out.println(ans);
+//        System.out.println(ans);
+        int i;
+        for(i = Integer.MAX_VALUE; i >= 0; i--) {
+            if(i * 10 > 0) break;
+        }
+            System.out.println(i + " " + i  * 10);
     }
 }
