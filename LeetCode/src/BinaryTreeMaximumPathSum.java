@@ -28,6 +28,7 @@ public class BinaryTreeMaximumPathSum {
             val = x;
         }
     }
+    /*
     int ans = Integer.MIN_VALUE;
     public int maxPathSum(TreeNode root) {
         dfs(root);
@@ -54,15 +55,30 @@ public class BinaryTreeMaximumPathSum {
         int maxRoot = Math.max(0, Math.max(leftMax, rightMax)) + root.val;
         ans = Math.max(ans, Math.max(maxRoot, rootMax));
         return maxRoot;
-    }
+    }*/
 
     public TreeNode generateTree() {
-        TreeNode root = new TreeNode(-2);
-        TreeNode node1 = new TreeNode(1);
+        TreeNode root = new TreeNode(2);
+        TreeNode node1 = new TreeNode(-1);
         TreeNode node2 = new TreeNode(3);
         root.left = node1;
 //        root.right = node2;
         return root;
+    }
+
+    int max = Integer.MIN_VALUE;
+    private int maxPathSum(TreeNode root) {
+        dfs(root);
+        return max;
+    }
+
+    private int dfs(TreeNode root) {
+        if (root == null) return 0;
+
+        int left = Math.max(dfs(root.left), 0);
+        int right = Math.max(dfs(root.right), 0);
+        max = Math.max(max, left + right + root.val);
+        return Math.max(left, right) + root.val;
     }
 
     public static void main(String[] args) {
