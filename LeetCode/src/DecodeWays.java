@@ -15,6 +15,13 @@
  * Tag: Dynamic Programming
  */
 public class DecodeWays {
+    // corner cases:
+    // 0 -> 0
+    // 1 -> 1
+    // 01 -> 0
+    // 10 -> 1
+    // 100 -> 0
+    // 30 -> 0
     public int numDecodings(String s) {
         // be careful of '0'
         // "01" is illegal
@@ -31,7 +38,7 @@ public class DecodeWays {
         return dp[s.length()];
     }
     public static void main(String[] args) {
-        int ans = new DecodeWays().numDecodings("1301");
+        int ans = new DecodeWays().numDecodings("30");
         System.out.println(ans);
     }
 }
