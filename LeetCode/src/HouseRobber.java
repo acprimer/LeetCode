@@ -1,6 +1,6 @@
 /**
  * Created by yaodh on 2015/4/16.
- *
+ * <p>
  * LeetCode: House Robber
  * Link: https://leetcode.com/problems/house-robber/
  * Description:
@@ -16,16 +16,34 @@
  * Tag: DP
  */
 public class HouseRobber {
+//    public int rob(int[] num) {
+//        int n = num.length, ans = 0;
+//        int[] dp = new int[n];
+//        for (int i = 0; i < n; i++) {
+//            dp[i] = num[i];
+//            for (int j = i - 2; j >= 0; j--) {
+//                dp[i] = Math.max(dp[i], dp[j] + num[i]);
+//            }
+//            ans = Math.max(ans, dp[i]);
+//        }
+//        return ans;
+//    }
+
     public int rob(int[] num) {
-        int n = num.length, ans = 0;
+        if (num == null || num.length <= 0) return 0;
+        int n = num.length;
         int[] dp = new int[n];
+        int ans = 0;
         for (int i = 0; i < n; i++) {
-            dp[i] = num[i];
-            for (int j = i - 2; j >= 0; j--) {
-                dp[i] = Math.max(dp[i], dp[j] + num[i]);
-            }
+            int x = (i >= 2 ? dp[i - 2] : 0);
+            int y = (i >= 3 ? dp[i - 3] : 0);
+            dp[i] = Math.max(x, y) + num[i];
             ans = Math.max(ans, dp[i]);
         }
         return ans;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new HouseRobber().rob(new int[]{1, 2, 3, 4, 5}));
     }
 }
