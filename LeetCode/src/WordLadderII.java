@@ -156,11 +156,11 @@ public class WordLadderII {
             for (int i = 0; i < ans.size(); i++) {
                 int v = map.get(ans.get(i).get(0));
                 u = path[v][1];
-                ans.get(i).add(0, u >= wordList.size() ? beginWord : wordList.get(u));
+                ans.get(i).add(0, u == start ? beginWord : wordList.get(u));
                 for (int j = 1; j < path[v][0]; j++) {
                     List<String> temp = new ArrayList<>(ans.get(i));
                     u = path[v][j + 1];
-                    temp.set(0, u >= wordList.size() ? beginWord : wordList.get(u));
+                    temp.set(0, u == start ? beginWord : wordList.get(u));
                     list.add(temp);
                 }
             }
