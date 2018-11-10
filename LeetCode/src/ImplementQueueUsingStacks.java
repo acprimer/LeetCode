@@ -4,37 +4,36 @@ import java.util.Stack;
  * Created by yaodh on 15/8/6.
  */
 public class ImplementQueueUsingStacks {
-    Stack<Integer> left = new Stack<Integer>();
-    Stack<Integer> right = new Stack<Integer>();
+    Stack<Integer> in = new Stack<Integer>();
+    Stack<Integer> out = new Stack<Integer>();
     // Push element x to the back of queue.
     public void push(int x) {
-        right.push(x);
+        in.push(x);
     }
 
     // Removes the element from in front of queue.
-    public void pop() {
-        if(left.empty()) {
-            while(!right.empty()) {
-                left.push(right.peek());
-                right.pop();
-            }
-        }
-        left.pop();
+    public int pop() {
+        pour();
+        return out.pop();
     }
 
     // Get the front element.
     public int peek() {
-        if(left.isEmpty()) {
-            while(!right.isEmpty()) {
-                left.push(right.peek());
-                right.pop();
+        pour();
+        return out.peek();
+    }
+
+    // 把in的元素倾倒入out中
+    private void pour() {
+        if(out.empty()) {
+            while(!in.empty()) {
+                out.push(in.pop());
             }
         }
-        return left.peek();
     }
 
     // Return whether the queue is empty.
     public boolean empty() {
-        return left.empty() && right.empty();
+        return out.empty() && in.empty();
     }
 }

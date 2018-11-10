@@ -17,20 +17,21 @@ import java.util.*;
  * Tag: Stack
  */
 public class MinStack {
+    // 使用Stack实现
     Stack<Integer> stack = new Stack<Integer>();
     Stack<Integer> minStack = new Stack<Integer>();
     public void push(int x) {
         stack.push(x);
-        if(minStack.empty() || x <= minStack.peek().intValue()) {
+        if(minStack.empty() || x <= minStack.peek()) {
             minStack.push(x);
         }
     }
 
     public void pop() {
-        if(stack.peek().intValue() == minStack.peek().intValue()) {
+        int top = stack.pop();
+        if(top == minStack.peek()) {
             minStack.pop();
         }
-        stack.pop();
     }
 
     public int top() {
