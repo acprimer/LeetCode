@@ -1,3 +1,5 @@
+import java.lang.ref.Reference;
+import java.lang.ref.ReferenceQueue;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
