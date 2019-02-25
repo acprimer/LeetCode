@@ -24,49 +24,76 @@
  * Tag: String
  */
 public class WildcardMatching {
-    public boolean isMatch(String s, String p) {
-        int i=0,j=0;
-        // i: find the first index of *
-        while(i<p.length() && p.charAt(i)!='*') {
-            if(i>=s.length() || !match(p.charAt(i),s.charAt(i))) return false;
-            i++;
-        }
-        if(i>=p.length()) return i>=s.length();
-        // j: find the last index of *
-        while(j<p.length()) {
-            int pid = p.length()-1-j;
-            int sid = s.length()-1-j;
-            if(p.charAt(pid)=='*') break;
-            if(sid<0 || !match(p.charAt(pid),s.charAt(sid))) return false;
-            j++;
-        }
-        if(i+j>s.length()) return false;
-        return search(s.substring(i,s.length()-j),p.substring(i,p.length()-j));
-    }
+//    public boolean isMatch(String s, String p) {
+//        int i=0,j=0;
+//        // i: find the first index of *
+//        while(i<p.length() && p.charAt(i)!='*') {
+//            if(i>=s.length() || !match(p.charAt(i),s.charAt(i))) return false;
+//            i++;
+//        }
+//        if(i>=p.length()) return i>=s.length();
+//        // j: find the last index of *
+//        while(j<p.length()) {
+//            int pid = p.length()-1-j;
+//            int sid = s.length()-1-j;
+//            if(p.charAt(pid)=='*') break;
+//            if(sid<0 || !match(p.charAt(pid),s.charAt(sid))) return false;
+//            j++;
+//        }
+//        if(i+j>s.length()) return false;
+//        return search(s.substring(i,s.length()-j),p.substring(i,p.length()-j));
+//    }
+//
+//    // search p in s
+//    public boolean search(String s, String p) {
+//        int i,j,start=0;
+//        for(i=0,j=0;i<s.length()&&j<p.length();i++) {
+//            if(p.charAt(j)=='*') {
+//                start = ++j;
+//                i--;
+//            } else if(match(p.charAt(j),s.charAt(i))) {
+//                j++;
+//            } else {
+//                i-=j-start;
+//                j=start;
+//            }
+//        }
+//        while(j<p.length() && p.charAt(j)=='*') {
+//            j++;
+//        }
+//        return j>=p.length();
+//    }
+//
+//    public boolean match(char a, char b) {
+//        if (a == '?' || a == b) return true;
+//        return false;
+//    }
 
-    // search p in s
-    public boolean search(String s, String p) {
-        int i,j,start=0;
-        for(i=0,j=0;i<s.length()&&j<p.length();i++) {
-            if(p.charAt(j)=='*') {
-                start = ++j;
-                i--;
-            } else if(match(p.charAt(j),s.charAt(i))) {
-                j++;
-            } else {
-                i-=j-start;
-                j=start;
+    // DP
+    // s=abceb p=*a*b
+    //   #abceb
+    // # tfffff
+    // * tttttt
+    // a ftffff
+    // * fttttt
+    // b ffffft
+    public boolean isMatch(String s, String p) {
+        s = "#" + s;
+        p = "#" + p;
+        boolean[][] dp = new boolean[p.length()][s.length()];
+        dp[0][0] = true;
+        for (int i = 1; i < p.length(); i++) {
+            if (p.charAt(i) == '*') dp[i][0] = dp[i - 1][0];
+            for (int j = 1; j < s.length(); j++) {
+                if (p.charAt(i) == '*') dp[i][j] = dp[i - 1][j] | dp[i][j - 1];
+                else dp[i][j] = (match(s.charAt(j), p.charAt(i)) && dp[i - 1][j - 1]);
             }
         }
-        while(j<p.length() && p.charAt(j)=='*') {
-            j++;
-        }
-        return j>=p.length();
+        return dp[p.length() - 1][s.length() - 1];
     }
 
     public boolean match(char a, char b) {
-        if (a == '?' || a == b) return true;
-        return false;
+        return a == b || b == '?';
     }
 
     public static void main(String[] args) {
