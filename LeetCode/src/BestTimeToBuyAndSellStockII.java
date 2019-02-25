@@ -16,23 +16,45 @@
  * Tag: Greedy
  */
 public class BestTimeToBuyAndSellStockII {
+//    public int maxProfit(int[] prices) {
+//        int ans = 0;
+//        for(int i=1;i<prices.length;i++) {
+//            if(prices[i] < prices[i-1]) {
+//                continue;
+//            }
+//            int pre = prices[i-1];
+//            while(i<prices.length && prices[i] >= prices[i-1]) {
+//                i++;
+//            }
+//            ans += prices[i-1] - pre;
+//        }
+//        return ans;
+//    }
+
+//    public int maxProfit(int[] prices) {
+//        int ans = 0;
+//        for (int i = 1; i < prices.length; i++) {
+//            ans += Math.max(0, prices[i] - prices[i-1]);
+//        }
+//        return ans;
+//    }
+
     public int maxProfit(int[] prices) {
+        int n = prices.length;
         int ans = 0;
-        for(int i=1;i<prices.length;i++) {
-            if(prices[i] < prices[i-1]) {
-                continue;
-            }
-            int pre = prices[i-1];
-            while(i<prices.length && prices[i] >= prices[i-1]) {
-                i++;
-            }
-            ans += prices[i-1] - pre;
+        for (int i = 1; i < n; i++) {
+            while (i < n && prices[i] < prices[i-1]) i++;
+            if (i >= n) break;
+            int low = prices[i-1];
+            while (i < n && prices[i] > prices[i-1]) i++;
+            int high = prices[i-1];
+            ans += high - low;
         }
         return ans;
     }
 
     public static void main(String[] args) {
-        int ans = new BestTimeToBuyAndSellStockII().maxProfit(new int[]{});
+        int ans = new BestTimeToBuyAndSellStockII().maxProfit(new int[]{1,2,3,4,5});
         System.out.println(ans);
     }
 }
