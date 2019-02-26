@@ -22,9 +22,9 @@ import java.util.List;
  * L: 16.
  * Return the formatted lines as:
  * [
- *  "This    is    an",
- *  "example  of text",
- *  "justification.  "
+ * "This    is    an",
+ * "example  of text",
+ * "justification.  "
  * ]
  * Note: Each word is guaranteed not to exceed L in length.
  * -----------------------------
@@ -104,45 +104,37 @@ public class TextJustification {
     }
 
     private String fill(String[] words, int maxWidth, int start, int end) {
-        boolean lastLine = (end >= words.length - 1);
-        if (lastLine || start == end)
-            return fillLastLine(words, maxWidth, start, end);
+        boolean lastLine = (end >= words.length - 1 || start == end);
         int sum = 0;
         for (int i = start; i <= end; i++) {
             sum += words[i].length();
         }
         int space = maxWidth - sum;
         StringBuilder builder = new StringBuilder();
-        int count = space / (end - start);
-        int mod = space % (end - start);
-        char[] arr = new char[count];
-        Arrays.fill(arr, ' ');
+        int count = 1;
+        int mod = 0;
+        if (!lastLine) {
+            count = space / (end - start);
+            mod = space % (end - start);
+        }
+        char[] arr = spaceArray(count);
         for (int i = start; i < end; i++) {
             builder.append(words[i]);
-            if (i-start < mod) {
+            if (i - start < mod) {
                 builder.append(' ');
             }
             builder.append(arr);
         }
         builder.append(words[end]);
+        if (builder.length() < maxWidth) {
+            builder.append(spaceArray(maxWidth - builder.length()));
+        }
         return builder.toString();
     }
 
-    private String fillLastLine(String[] words, int maxWidth, int start, int end) {
-        StringBuilder builder = new StringBuilder();
-        int sum = 0;
-        for (int i = start; i <= end; i++) {
-            sum += words[i].length();
-        }
-        for (int i = start; i <= end; i++) {
-            builder.append(words[i]);
-            if (i < end) {
-                builder.append(' ');
-            }
-        }
-        char[] arr = new char[maxWidth - sum - end + start];
+    private char[] spaceArray(int n) {
+        char[] arr = new char[n];
         Arrays.fill(arr, ' ');
-        builder.append(arr);
-        return builder.toString();
+        return arr;
     }
 }
