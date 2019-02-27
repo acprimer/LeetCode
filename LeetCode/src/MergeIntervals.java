@@ -1,6 +1,6 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import common.Interval;
+
+import java.util.*;
 
 /**
  * Created by yaodh on 2014/11/23.
@@ -18,77 +18,27 @@ import java.util.List;
  * Tag: Greedy
  */
 public class MergeIntervals {
-    class Interval {
-        int start, end;
-
-        Interval() {
-            start = end = 0;
-        }
-
-        Interval(int s, int e) {
-            start = s;
-            end = e;
-        }
-    }
-
-    class IntervalCmp implements Comparable<IntervalCmp> {
-        int start, end;
-
-        IntervalCmp(int s, int e) {
-            start = s;
-            end = e;
-        }
-
-        @Override
-        public int compareTo(IntervalCmp o) {
-            return Integer.valueOf(start).compareTo(Integer.valueOf(o.start));
-        }
-    }
-
     public List<Interval> merge(List<Interval> intervals) {
-        if (intervals == null || intervals.size() <= 1) {
-            return intervals;
-        }
-        List<IntervalCmp> list = new ArrayList<IntervalCmp>();
-        for (Interval interval : intervals) {
-            list.add(new IntervalCmp(interval.start, interval.end));
-        }
-        Collections.sort(list);
-        int largest = list.get(0).end;
-        int count = 1;
-        intervals.get(0).start = list.get(0).start;
-        intervals.get(0).end = list.get(0).end;
-        for (int i = 1; i < list.size(); i++) {
-            if (list.get(i).start <= largest) {
-                largest = Math.max(largest, list.get(i).end);
-                intervals.get(count).end = largest;
+        intervals.sort(Comparator.comparingInt(o -> o.start));
+        List<Interval> ans = new ArrayList<>();
+        for (Interval v : intervals) {
+            Interval u;
+            if (ans.size() == 0 || (u = ans.get(ans.size() - 1)).end < v.start) {
+                ans.add(v);
             } else {
-                intervals.get(count - 1).end = largest;
-                intervals.get(count++).start = list.get(i).start;
-                largest = list.get(i).end;
+                u.end = Math.max(u.end, v.end);
             }
         }
-        intervals.get(count - 1).end = largest;
-        for (int i = intervals.size() - count; i > 0; i--) {
-            intervals.remove(count);
-        }
-        return intervals;
-    }
-
-    public void solution() {
-        int[] start = new int[]{};
-        int[] end = new int[]{};
-        List<Interval> list = new ArrayList<Interval>();
-        for (int i = 0; i < start.length; i++) {
-            list.add(new Interval(start[i], end[i]));
-        }
-        list = merge(list);
-        for (Interval interval : list) {
-            System.out.println(interval.start + " " + interval.end);
-        }
+        return ans;
     }
 
     public static void main(String[] args) {
-        new MergeIntervals().solution();
+        List<Interval> ans = new MergeIntervals()
+                .merge(Arrays.asList(
+                        new Interval(1, 4),
+                        new Interval(4, 5)));
+        for (Interval v : ans) {
+            System.out.println(v);
+        }
     }
 }

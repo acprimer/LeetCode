@@ -11,15 +11,6 @@
  * Tag: BST
  */
 public class ConvertSortedArrayToBST {
-    private class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
     public TreeNode sortedArrayToBST(int[] num) {
         if(num == null) return null;
         return build(num, 0, num.length-1);
@@ -34,15 +25,8 @@ public class ConvertSortedArrayToBST {
         return root;
     }
 
-    public void dfs(TreeNode root) {
-        if(root == null) return;
-        System.out.println(root.val);
-        dfs(root.left);
-        dfs(root.right);
-    }
-
     public static void main(String[] args) {
         TreeNode root = new ConvertSortedArrayToBST().sortedArrayToBST(new int[]{1,2,3,4,5,6,7});
-        new ConvertSortedArrayToBST().dfs(root);
+        root.print();
     }
 }

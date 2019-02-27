@@ -14,6 +14,28 @@ public class TreeNode {
         this.right = right;
     }
 
+    private String getLeft() {
+        if (left != null) {
+            return String.valueOf(left.val);
+        } else {
+            return "^";
+        }
+    }
+
+    private String getRight() {
+        if (right != null) {
+            return String.valueOf(right.val);
+        } else {
+            return "^";
+        }
+    }
+
+    public void print() {
+        System.out.println(String.format("[%d %s %s]", val, getLeft(), getRight()));
+        if (left != null) left.print();
+        if (right != null) right.print();
+    }
+
     public static TreeNode generateTree() {
 //        TreeNode node3 = new TreeNode(4);
 //        TreeNode node4 = new TreeNode(4);

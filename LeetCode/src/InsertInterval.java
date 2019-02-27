@@ -4,7 +4,7 @@ import java.util.List;
 /**
  * Created by yaodh on 2014/11/19.
  *
- * LeetCode: Insert Interval
+ * LeetCode: Insert common.Interval
  * Link: https://oj.leetcode.com/problems/insert-interval/
  * Description:
  * -----------------------------
@@ -61,9 +61,9 @@ public class InsertInterval {
 
     public void solution() {
         List<Interval> intervals = new ArrayList<Interval>();
-//        intervals.add(new Interval(1,3));
-//        intervals.add(new Interval(6,9));
-//        intervals.add(new Interval(16,19));
+//        intervals.add(new common.Interval(1,3));
+//        intervals.add(new common.Interval(6,9));
+//        intervals.add(new common.Interval(16,19));
         intervals = new InsertInterval().insert(intervals, new Interval(2,8));
         for(Interval xy : intervals) {
             System.out.println(xy.start + " " + xy.end);

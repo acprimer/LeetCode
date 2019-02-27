@@ -26,15 +26,15 @@ public class SlidingWindowMaximum {
 //            return new int[]{};
 //        }
 //        int[] ans = new int[nums.length - k + 1];
-//        PriorityQueue<Interval> queue = new PriorityQueue<Interval>();
-//        Interval[] intervals = new Interval[nums.length];
+//        PriorityQueue<common.Interval> queue = new PriorityQueue<common.Interval>();
+//        common.Interval[] intervals = new common.Interval[nums.length];
 //        for (int i = 0; i < k; i++) {
-//            queue.offer(intervals[i] = new Interval(nums[i], i));
+//            queue.offer(intervals[i] = new common.Interval(nums[i], i));
 //        }
 //        ans[0] = queue.peek().val;
 //        for (int i = k; i < nums.length; i++) {
 //            queue.remove(intervals[i - k]);
-//            queue.offer(intervals[i] = new Interval(nums[i], i));
+//            queue.offer(intervals[i] = new common.Interval(nums[i], i));
 //            ans[i - k + 1] = queue.peek().val;
 //        }
 //        return ans;

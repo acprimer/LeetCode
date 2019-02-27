@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 /**
  * Created by yaodh on 2014/11/17.
  *
@@ -13,51 +11,26 @@ import java.util.List;
  * Tag: BST
  */
 public class ConvertSortedListToBST {
-    private class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
-    private class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
     public TreeNode sortedListToBST(ListNode head) {
         if(head == null) return null;
-        List<Integer> array = new ArrayList<Integer>();
-        while(head != null) {
-            array.add(head.val);
-            head = head.next;
-        }
-        int[] num = new int[array.size()];
-        for(int i=0;i<array.size();i++) {
-            num[i] = array.get(i);
-        }
-        return build(num, 0, num.length-1);
-    }
 
-    private TreeNode build(int[] num, int start, int end) {
-        if(start > end) return null;
-        int mid = (start + end) >> 1;
-        TreeNode root = new TreeNode(num[mid]);
-        root.left = build(num, start, mid-1);
-        root.right = build(num, mid+1, end);
+        ListNode fast = head, slow =head;
+        ListNode p = null;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            p = slow;
+            slow = slow.next;
+        }
+        if (p != null) p.next = null;
+        else head = null;
+        TreeNode root = new TreeNode(slow.val);
+        root.left = sortedListToBST(head);
+        root.right = sortedListToBST(slow.next);
         return root;
     }
 
-    public void dfs(TreeNode root) {
-        if(root == null) return;
-        System.out.println(root.val);
-        dfs(root.left);
-        dfs(root.right);
+    public static void main(String[] args) {
+        TreeNode root = new ConvertSortedListToBST().sortedListToBST(ListNode.generate(-10, -3, 0, 5, 9));
+        root.print();
     }
-
 }
