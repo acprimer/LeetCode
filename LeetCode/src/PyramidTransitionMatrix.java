@@ -3,11 +3,6 @@ import java.util.*;
 public class PyramidTransitionMatrix {
     private Map<String, StringBuilder> map = null;
 
-    public static void main(String[] args) {
-        System.out.println(new PyramidTransitionMatrix()
-                .pyramidTransition("X", Arrays.asList("XXX", "XXY", "XYX", "XYY", "YXZ")));
-    }
-
     private void genMap(List<String> allowed) {
         if (map != null) return;
         map = new HashMap<>();
@@ -45,4 +40,10 @@ public class PyramidTransitionMatrix {
         }
         return false;
     }
+
+    public static void main(String[] args) {
+        System.out.println(new PyramidTransitionMatrix()
+                .pyramidTransition("X", Arrays.asList("XXX", "XXY", "XYX", "XYY", "YXZ")));
+    }
+
 }

@@ -26,6 +26,7 @@ public class EmployeeFreeTime {
         }
     }
 
+    // 参照 Merge K Sorted List
     public List<Interval> employeeFreeTime(List<List<Interval>> avails) {
         List<Interval> merged = merge(avails);
 
@@ -40,23 +41,38 @@ public class EmployeeFreeTime {
         return ans;
     }
 
-    private List<Interval> merge(List<List<Interval>> avails) {
-        List<Interval> intervals = new ArrayList<>();
-        for (List<Interval> v : avails) {
-            intervals.addAll(v);
+    private class IntervalNode {
+        Interval val;
+        IntervalNode next;
+
+        public IntervalNode(Interval val, IntervalNode next) {
+            this.val = val;
+            this.next = next;
         }
-        return mergeIntervals(intervals);
     }
 
-    public List<Interval> mergeIntervals(List<Interval> intervals) {
-        intervals.sort(Comparator.comparingInt(o -> o.start));
+    private List<Interval> merge(List<List<Interval>> avails) {
+        Queue<IntervalNode> queue = new PriorityQueue<>(Comparator.comparingInt(o -> o.val.start));
+        for (int i = 0; i < avails.size(); i++) {
+            List<Interval> v = avails.get(i);
+            if (v == null || v.isEmpty()) continue;
+            IntervalNode p = new IntervalNode(v.get(0), null);
+            queue.offer(p);
+            for (int j = 1; j < v.size(); j++) {
+                IntervalNode node = new IntervalNode(v.get(j), null);
+                p.next = node;
+                p = node;
+            }
+        }
         List<Interval> ans = new ArrayList<>();
-        for (Interval v : intervals) {
-            Interval u;
-            if (ans.size() == 0 || (u = ans.get(ans.size() - 1)).end < v.start) {
-                ans.add(v);
-            } else {
-                u.end = Math.max(u.end, v.end);
+        while (!queue.isEmpty()) {
+            IntervalNode p = queue.poll();
+            if (p.next != null) queue.offer(p.next);
+            Interval last;
+            if (ans.size() == 0 || p.val.start > (last = ans.get(ans.size() - 1)).end) {
+                ans.add(p.val);
+            } else if (p.val.end > last.end) {
+                last.end = p.val.end;
             }
         }
         return ans;

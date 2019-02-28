@@ -30,4 +30,13 @@ public class ListNode {
         }
         System.out.println();
     }
+
+    public void print() {
+        ListNode p = this;
+        while (p != null) {
+            System.out.print(p.val + "->");
+            p = p.next;
+        }
+        System.out.println();
+    }
 }

@@ -13,77 +13,34 @@ import java.util.*;
  * Tag: Heap
  */
 public class MergeKSortedLists {
-    private class ListNode {
-        int val;
-        ListNode next;
 
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
-
-    private class NodeWithCmp implements Comparable<NodeWithCmp> {
-        ListNode node;
-
-        NodeWithCmp(ListNode a) {
-            node = a;
-        }
-
-        @Override
-        public int compareTo(NodeWithCmp o) {
-            return node.val > o.node.val ? 1 : -1;
-        }
-    }
-
-    public ListNode mergeKLists(List<ListNode> lists) {
+    public ListNode mergeKLists(ListNode[] lists) {
         ListNode head = new ListNode(0);
-        Queue<NodeWithCmp> queue = new PriorityQueue<NodeWithCmp>();
+        Queue<ListNode> queue = new PriorityQueue<>(Comparator.comparingInt(o -> o.val));
+        // 每个链表的头结点入队
         for (ListNode p : lists) {
-            if (p != null) queue.offer(new NodeWithCmp(p));
+            if (p != null) queue.offer(p);
         }
         ListNode pre = head;
         while (!queue.isEmpty()) {
-            NodeWithCmp p = queue.poll();
-            ListNode node = p.node;
-            if (node.next != null) {
-                queue.offer(new NodeWithCmp(node.next));
+            ListNode p = queue.poll();
+            if (p.next != null) {
+                queue.offer(p.next);
             }
-            node.next = null;
-            pre = pre.next = node;
+            p.next = null;
+            pre = pre.next = p;
         }
         return head.next;
     }
 
     public static void main(String[] args) {
-        new MergeKSortedLists().solution();
-    }
-
-    public ListNode generate(int[] a) {
-        ListNode head = new ListNode(a[0]);
-        ListNode p = head;
-        for (int i = 1; i < a.length; i++) {
-            ListNode node = new ListNode(a[i]);
-            p = p.next = node;
-        }
-        return head;
-    }
-
-    private void solution() {
-        ListNode[] heads = new ListNode[4];
-        heads[0] = generate(new int[]{1, 3, 4, 8});
-        heads[1] = generate(new int[]{2, 5, 7, 8});
-        heads[2] = generate(new int[]{2, 3, 9, 15});
-        heads[3] = generate(new int[]{1, 7, 12, 16});
-        List<ListNode> list = new ArrayList<ListNode>();
-        list.add(heads[0]);
-        list.add(heads[1]);
-        list.add(heads[2]);
-        list.add(heads[3]);
-        ListNode p = mergeKLists(list);
-        while (p != null) {
-            System.out.print(p.val + " ");
-            p = p.next;
-        }
+        new MergeKSortedLists().mergeKLists(
+                new ListNode[]{
+                        ListNode.generate(1, 3, 4, 8),
+                        ListNode.generate(2, 5, 7, 8),
+                        ListNode.generate(2, 3, 9, 15),
+                        ListNode.generate(1, 7, 12, 16)
+                }
+        ).print();
     }
 }
