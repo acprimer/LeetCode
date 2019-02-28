@@ -34,7 +34,7 @@ public class P1029 {
     }
 
     private void dfs(int u, int cost, int depth) {
-        if (depth > limit) return;
+        if (depth > limit || cost >= ans) return;
         for (int v = 0; v < count; v++) {
             if (!vis[v] && graph[u][v] > 0) {
                 if (v == dst) ans = Math.min(ans, cost + graph[u][v]);
