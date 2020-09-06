@@ -56,9 +56,49 @@ public class LowestCommonAncestorOfABinaryTree {
         }
     }
 
+    public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
+        List<TreeNode> first = new ArrayList<>();
+        List<TreeNode> second = new ArrayList<>();
+        first.add(root);
+        second.add(root);
+        if (find(first, root, p) && find(second, root, q)) {
+            TreeNode result = null;
+            for (int i = 0; i < first.size() && i < second.size(); i++) {
+                if (first.get(i) == second.get(i)) {
+                    result = first.get(i);
+                } else {
+                    break;
+                }
+            }
+            return result;
+        } else {
+            return null;
+        }
+    }
+
+    public boolean find(List<TreeNode> list, TreeNode root, TreeNode p) {
+        if (root == null) return false;
+        if (p == root) {
+            return true;
+        }
+        list.add(root.left);
+        if (find(list, root.left, p)) {
+            return true;
+        } else {
+            list.remove(root.left);
+        }
+        list.add(root.right);
+        if (find(list, root.right, p)) {
+            return true;
+        } else {
+            list.remove(root.right);
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         TreeNode tree = new LowestCommonAncestorOfABinaryTree().gen(new int[]{1, 2, 3});
-        TreeNode ans = new LowestCommonAncestorOfABinaryTree().lowestCommonAncestor(tree, tree.left, tree.left.left);
+        TreeNode ans = new LowestCommonAncestorOfABinaryTree().lowestCommonAncestor2(tree, tree.left, tree.right);
         System.out.println(ans.val);
     }
 
