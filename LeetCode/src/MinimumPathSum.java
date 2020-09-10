@@ -13,7 +13,7 @@
  * Tag: Dynamic Programming
  */
 public class MinimumPathSum {
-    public int minPathSum(int[][] grid) {
+    /*public int minPathSum(int[][] grid) {
         if (grid == null || grid.length <= 0 || grid[0].length <= 0) return 0;
         int row = grid.length;
         int column = grid[0].length;
@@ -29,5 +29,26 @@ public class MinimumPathSum {
             }
         }
         return grid[row - 1][column - 1];
+    }*/
+
+    public int minPathSum(int[][] grid) {
+        if (grid == null || grid.length <= 0 || grid[0].length <= 0) return 0;
+        int row = grid.length;
+        int column = grid[0].length;
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                if (i == 0 && j == 0) continue;
+                grid[i][j] += Math.min(cost(grid, i - 1, j), cost(grid, i, j - 1));
+            }
+        }
+        return grid[row - 1][column - 1];
+    }
+
+    int cost(int[][] grid, int x, int y) {
+        return (x < 0 || y < 0) ? 0x3f3f3f3f : grid[x][y];
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new MinimumPathSum().minPathSum(new int[][]{{1,3,1}, {1,5,1}, {4,2,1}}));
     }
 }
